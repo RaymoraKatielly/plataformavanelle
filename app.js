@@ -223,23 +223,70 @@ const fundamentals = [
     `
   },
   {
-    id: "higiene",
-    title: "Higiene & Segurança",
-    timeMin: 45,
-    desc: "Limpeza profunda, organização individual e uso exclusivo de produtos profissionais.",
-    icon: iconShield(),
-    status: "none",
-    dots: 3,
-    content: `
-      <h4>Estrutura e organização</h4>
-      <ul>
-        <li><b>Limpeza profunda:</b> equipe especializada realiza limpeza periódica em todo o espaço.</li>
-        <li><b>Responsabilidade individual:</b> bancada, lavatório e carrinho sempre higienizados.</li>
-        <li><b>Rodízio de organização:</b> obrigatório para cabeleireiros e barbeiros.</li>
-      </ul>
-      <p><b>Importante:</b> Produtos utilizados são profissionais, dermatologicamente testados e aprovados.</p>
-    `
-  },
+  id: "higiene",
+  title: "Higiene, Segurança e Padrões de Excelência",
+  timeMin: 45,
+  desc: "Protocolos obrigatórios de higiene, segurança e postura profissional.",
+  icon: iconShield(),
+  status: "none",
+  dots: 3,
+  content: `
+    <h4>PROTOCOLOS DE HIGIENE, SEGURANÇA E EXCELÊNCIA</h4>
+    <p>
+      A higiene e a segurança são a <b>base da confiança</b> que nossos clientes depositam em nós.
+      Cada ação nessa área é um compromisso com a <b>vida</b> e o <b>bem-estar</b>.
+    </p>
+
+    <h4>PADRÕES MÍNIMOS OBRIGATÓRIOS</h4>
+    <p>Estes padrões <b>NÃO são negociáveis</b>. São critério mínimo de funcionamento:</p>
+
+    <h4>🧹 LIMPEZA E ORGANIZAÇÃO</h4>
+    <ul>
+      <li>✓ Bancada, carrinho e lavatório limpos após cada atendimento</li>
+      <li>✓ Ferramentas e instrumentos higienizados a cada uso</li>
+      <li>✓ Descarte adequado de resíduos e perfurocortantes</li>
+    </ul>
+
+    <h4>✅ SEGURANÇA DO CLIENTE</h4>
+    <ul>
+      <li>✓ Diagnóstico obrigatório antes de qualquer procedimento</li>
+      <li>✓ Cumprimento rigoroso dos protocolos técnicos</li>
+      <li>✓ Comunicação constante durante todo o atendimento</li>
+    </ul>
+
+    <h4>🗂️ ORGANIZAÇÃO INDIVIDUAL</h4>
+    <ul>
+      <li>✓ Você é responsável pela sua estação de trabalho</li>
+      <li>✓ Produtos, ferramentas e utensílios identificados e acessíveis</li>
+      <li>✓ Ambiente mantido limpo durante <b>TODO</b> o expediente</li>
+    </ul>
+
+    <h4>APRESENTAÇÃO PESSOAL</h4>
+    <p><b>Você é a imagem da marca.</b></p>
+
+    <h4>PADRÃO ESPERADO</h4>
+    <ul>
+      <li>✓ Vestimenta adequada e profissional</li>
+      <li>✓ Higiene pessoal impecável</li>
+      <li>✓ Cabelo alinhado</li>
+      <li>✓ Perfume suave — respeitando a sensibilidade do cliente</li>
+      <li>✓ Linguagem educada e respeitosa</li>
+      <li>✓ Postura elegante — sempre</li>
+    </ul>
+
+    <h4>📵 CELULAR — USO APENAS PROFISSIONAL</h4>
+    <p>
+      Durante atendimentos, o celular deve permanecer <b>no bolso e no silencioso</b>.
+      Seu foco deve estar <b>100% no cliente</b>.
+    </p>
+
+    <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
+      <b>Elegância, discrição e postura.</b><br/>
+      Sempre.
+    </p>
+  `
+}
+,
   {
     id: "produtos",
     title: "Nossos Produtos",
