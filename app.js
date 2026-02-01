@@ -74,46 +74,132 @@ const fundamentals = [
   `
 },
   {
+  id: "missao",
+  title: "Missão, Visão e Valores",
+  timeMin: 30,
+  desc: "Propósito, direção e princípios inegociáveis que sustentam o padrão Vanélle.",
+  icon: iconStar(),
+  status: "none",
+  dots: 3,
+  content: `
+    <h4>MISSÃO</h4>
+    <p>
+      Existimos para entregar <b>beleza com propósito</b>, <b>bem-estar com excelência</b> e
+      <b>identidade com significado</b>. Criamos experiências que transformam autoestima,
+      confiança e a forma como cada cliente se vê — sempre revelando a sua
+      <b>MELHOR VERSÃO</b>.
+    </p>
 
-    id: "missao",
-    title: "Missão, Visão e Valores",
-    timeMin: 30,
-    desc: "Experiências inesquecíveis com excelência. Referência no Vale do Araguaia.",
-    icon: iconStar(),
-    status: "progress",
-    dots: 3,
-    content: `
-      <h4>Missão</h4>
-      <p>Entregar experiências inesquecíveis em beleza, com excelência, respeito e profissionalismo.</p>
-      <h4>Visão</h4>
-      <p>Ser referência em todo o Vale do Araguaia, transformando cada cliente em sua melhor versão, com uma experiência única.</p>
-      <h4>Valores</h4>
-      <ul>
-        <li>Compromisso</li><li>Clareza</li><li>Respeito</li><li>Excelência</li><li>Crescimento contínuo</li><li>Responsabilidade coletiva</li>
-      </ul>
-      <p><b>Observação:</b> Ao ingressar na Vanélle Concept, todo profissional declara ciência e concordância com este manual, que possui força complementar ao contrato.</p>
-    `
-  },
+    <h4>VISÃO</h4>
+    <p>
+      Ser referência em <b>excelência</b>, <b>profissionalismo</b> e <b>experiência premium</b>
+      no segmento da beleza no <b>Vale do Araguaia</b>, com crescimento sustentável,
+      organização, inovação e reconhecimento pela satisfação dos clientes e pelo
+      desenvolvimento de profissionais.
+    </p>
+
+    <h4>VALORES (INEGOCIÁVEIS)</h4>
+    <ul>
+      <li>✓ <b>Excelência</b> — fazemos bem feito, sempre, em cada detalhe</li>
+      <li>✓ <b>Organização e processos</b> — nada é improvisado; seguimos padrão</li>
+      <li>✓ <b>Profissionalismo</b> — postura vem antes da habilidade</li>
+      <li>✓ <b>Respeito</b> — ao cliente, à equipe, aos parceiros e ao ambiente</li>
+      <li>✓ <b>Qualidade e segurança</b> — serviços responsáveis, técnicos e conscientes</li>
+      <li>✓ <b>Crescimento contínuo</b> — evolução profissional e pessoal constante</li>
+      <li>✓ <b>Responsabilidade coletiva</b> — cada ação impacta o todo</li>
+      <li>✓ <b>Honra, verdade, fé e legado</b> — crescemos com princípios</li>
+    </ul>
+
+    <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
+      <b>Aqui, valores não são discurso.</b><br/>
+      São prática diária.
+    </p>
+  `
+}
+,
   {
-    id: "conduta",
-    title: "Código de Conduta e Regulamento Interno",
-    timeMin: 60,
-    desc: "Regras essenciais, comportamento profissional, valores e princípios da empresa.",
-    icon: iconDoc(),
-    status: "none",
-    dots: 3,
-    content: `
-      <h4>Horário padrão de atendimento</h4>
-      <p><b>Segunda a sábado:</b> 8h às 19h30</p>
-      <h4>Diretrizes</h4>
-      <ul>
-        <li>Postura e comunicação profissional</li>
-        <li>Organização do ambiente após cada atendimento</li>
-        <li>Respeito à equipe e ao cliente</li>
-        <li>Padrões de apresentação e higiene</li>
-      </ul>
-    `
-  },
+  id: "conduta",
+  title: "Código de Conduta e Regulamento Interno",
+  timeMin: 25,
+  desc: "Princípios, normas, cultura e estrutura que orientam o comportamento na Vanélle.",
+  icon: iconDoc(),
+  status: "none",
+  dots: 3,
+  content: `
+    <h4>APRESENTAÇÃO</h4>
+    <p>
+      Este documento estabelece os <b>princípios</b>, <b>normas</b> e <b>diretrizes</b> que regulam
+      o comportamento, as responsabilidades e os direitos de todos os colaboradores do
+      <b>Vanélle Concept</b>.
+    </p>
+
+    <h4>ORGANOGRAMA & AUTORIDADE</h4>
+    <p>
+      A Vanélle é uma empresa estruturada. Clareza evita conflitos.
+      Conhecer a estrutura garante que cada decisão chegue ao lugar certo.
+    </p>
+
+    <h4>ESTRUTURA EXECUTIVA</h4>
+    <ul>
+      <li>
+        ✓ <b>Diretora Geral & Criativa — Mirelle Sousa</b><br/>
+        Responsável por visão estratégica, criatividade, marca, experiência do cliente
+        e direção geral.
+      </li>
+      <li>
+        ✓ <b>Diretora Financeira & Administrativa — Vandriellen Alves Ferreira</b><br/>
+        Responsável por finanças, administração, processos internos e recursos humanos.
+      </li>
+    </ul>
+
+    <h4>ESTRUTURA DE CADA SETOR</h4>
+    <p>Todos os setores possuem:</p>
+    <ul>
+      <li>✓ Responsável definido — uma pessoa clara como referência</li>
+      <li>✓ Função clara — sabemos exatamente o que cada um faz</li>
+      <li>✓ Limite de atuação — autonomia dentro de fronteiras</li>
+    </ul>
+
+    <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
+      <b>Isso não é burocracia. É clareza.</b>
+    </p>
+
+    <h4>RESPEITANDO O ORGANOGRAMA</h4>
+    <ul>
+      <li>✓ Decisões devem ser escaladas para o responsável correto</li>
+      <li>✓ Não pule etapas ou contorne o organograma</li>
+      <li>✓ Respeite os limites de autoridade de cada pessoa</li>
+      <li>✓ Em caso de dúvida, procure seu gestor direto</li>
+    </ul>
+
+    <h4>CULTURA DO TIME</h4>
+    <p>Na Vanélle, acreditamos em princípios fundamentais:</p>
+
+    <h4>CARÁTER VEM ANTES DA TÉCNICA</h4>
+    <p>
+      Você pode ser o profissional mais hábil do mercado, mas sem caráter não pertence aqui.
+      Honestidade, integridade e ética são <b>inegociáveis</b>.
+    </p>
+
+    <h4>ORGANIZAÇÃO GERA CRESCIMENTO</h4>
+    <p>
+      Uma empresa desorganizada é uma empresa que falha.
+      Aqui, tudo tem <b>ordem</b>, <b>padrão</b> e <b>processo</b>.
+    </p>
+
+    <h4>POSTURA SUSTENTA RESULTADOS</h4>
+    <p>
+      Elegância, profissionalismo e respeito sustentam os resultados no longo prazo.
+    </p>
+
+    <h4>FRASE-BASE DA NOSSA CULTURA</h4>
+    <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
+      <b>"Contratamos caráter. Habilidades, treinamos."</b><br/>
+      Aqui você sempre pode evoluir tecnicamente — mas caráter é não-negociável.
+    </p>
+  `
+}
+,
   {
     id: "sistemas",
     title: "Sistemas Internos",
