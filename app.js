@@ -2,26 +2,79 @@
    DATA (você pode editar)
    ========================== */
 
+   //sessão fundamentos essenciais
 const fundamentals = [
   {
-    id: "apresentacao",
-    title: "Apresentação Pessoal",
-    timeMin: 20,
-    desc: "Boas-vindas à Vanélle, postura profissional. Marcas: Morena Rosa, Arte e Beleza.",
-    icon: iconUser(),
-    status: "done", // done | progress | none
-    dots: 3,
-    content: `
-      <h4>Bem-vindo(a) ao Vanélle</h4>
-      <p>Bem-vindo(a) ao Vanélle Concept Beleza e Bem-Estar — um espaço único, sonhado e construído com propósito.</p>
-      <h4>Nossas marcas</h4>
-      <ul>
-        <li><b>Morena Rosa Art e Beleza</b> — excelência em estética e beleza</li>
-        <li>Outras marcas parceiras — padrão e experiência premium</li>
-      </ul>
-    `
-  },
+  id: "apresentacao",
+  title: "Apresentação Pessoal",
+  timeMin: 20,
+  desc: "Boas-vindas ao Vanélle Concept e o propósito que sustenta nossa excelência.",
+  icon: iconUser(),
+  status: "none",
+  dots: 3,
+  content: `
+    <h4>BEM-VINDO(A) AO VANÉLLE CONCEPT</h4>
+    <p>
+      Bem-vindo(a) ao <b>Vanélle Concept Beleza e Bem-Estar</b> — um espaço único, sonhado e construído com propósito.
+      Aqui, unimos <b>marcas</b>, <b>gestão</b> e <b>excelência</b> para entregar uma experiência completa em beleza e bem-estar.
+    </p>
+
+    <h4>NOSSAS MARCAS</h4>
+    <p>Dentro desse lugar abençoado, vivem duas marcas que carregam história e identidade:</p>
+    <ul>
+      <li>✓ <b>Morena Rosa Art e Beleza</b> — excelência em cuidados capilares e estética feminina</li>
+      <li>✓ <b>Barba Negra Barbearia</b> — ambiente exclusivo para barba e estilo masculino</li>
+    </ul>
+
+    <h4>POR QUE EXISTIMOS</h4>
+    <p>
+      Nós existimos por um motivo: <b>transformar pessoas na sua melhor versão</b>, com padrão, respeito e profissionalismo.
+    </p>
+
+    <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
+      <b>Sua MELHOR VERSÃO… sempre no MELHOR LUGAR.</b>
+    </p>
+
+    <h4>NOSSA HISTÓRIA</h4>
+    <p>
+      Em <b>julho de 2010</b>, abrimos o <b>Morena Rosa Art e Beleza</b>. Desde então, crescemos com consistência, fé e trabalho diário.
+      O Morena Rosa nasceu em um momento difícil financeiramente — mas com um chamado no coração e um legado de família:
+      o amor pela beleza e pelo servir.
+    </p>
+
+    <p>
+      Desde cedo, compreendemos algo que carregamos até hoje: <b>beleza também é ordem, organização e padrão</b>.
+      Quando chegamos em <b>Água Boa</b> com família pequena, recomeçamos do zero. Foram dias simples, difíceis e cheios de superação.
+      Mas Deus nos sustentou e, com trabalho intenso, visão e disciplina, construímos uma empresa sólida — com estrutura,
+      processos e uma cultura que respeita pessoas e valoriza profissionais.
+    </p>
+
+    <p>
+      Depois, nasceu a <b>Barba Negra Barbearia</b>: um ambiente exclusivo para homens, onde seguimos construindo uma marca forte,
+      com identidade e excelência.
+    </p>
+
+    <p>
+      Hoje, somamos <b>mais de 20 parceiros diretos</b> e <b>mais de 50 indiretos</b>, entre CLT, parceiros, sublocatários e especialistas
+      de apoio (contabilidade, jurídico, segurança do trabalho e outros).
+    </p>
+
+    <p>🙏 Só temos que agradecer a Deus por tudo que Ele tem nos proporcionado.</p>
+
+    <h4>NOSSA ESSÊNCIA</h4>
+    <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
+      <b>Contratamos caráter e treinamos habilidades.</b><br/>
+      <span style="color:rgba(43,31,22,.75)">E isso não é frase bonita: é critério.</span>
+    </p>
+
+    <p>
+      Aqui, somos especialistas em fazer cada cliente sair daqui <b>melhor do que entrou</b> — por fora e por dentro,
+      com respeito, cuidado, técnica e postura.
+    </p>
+  `
+},
   {
+
     id: "missao",
     title: "Missão, Visão e Valores",
     timeMin: 30,
