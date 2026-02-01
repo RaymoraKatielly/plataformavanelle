@@ -778,3 +778,57 @@ h1{
   .tracks{ grid-template-columns: 1fr; }
   h1{ font-size: 34px; }
 }
+
+/* ==================================================
+   PATCH — MODAL EM TELA CHEIA (SEM CORTE DE CONTEÚDO)
+   Plataforma Vanélle
+   ================================================== */
+
+/* Overlay ocupa a viewport inteira */
+.overlay{
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Modal vira "página" com altura total e layout em coluna */
+.modal{
+  width: min(980px, calc(100% - 32px));
+  height: calc(100vh - 32px);
+  max-height: calc(100vh - 32px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho e ações não encolhem */
+.modal-head,
+.modal-actions{
+  flex: 0 0 auto;
+}
+
+/* Corpo ocupa o resto e rola */
+.modal-body{
+  flex: 1 1 auto;
+  min-height: 0;              /* ESSENCIAL p/ scroll funcionar em flex */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 24px;
+}
+
+/* Evita quebra feia em textos longos */
+.modal-body p,
+.modal-body li{
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Em telas menores, garante respiro */
+@media (max-width: 560px){
+  .modal{
+    width: calc(100% - 20px);
+    height: calc(100vh - 20px);
+    max-height: calc(100vh - 20px);
+  }
+}
+/* ================================================== */
