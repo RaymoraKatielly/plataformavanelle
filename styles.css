@@ -835,4 +835,9 @@ h1{
     max-height: calc(100vh - 20px);
   }
 }
+/* trava o scroll do fundo quando abrir o módulo */
+body.module-open{
+  overflow: hidden;
+}
+
 /* ================================================== */
