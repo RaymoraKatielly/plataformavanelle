@@ -1,14 +1,8 @@
-/* ==================================================
-   VANÉLLE — app.js (organizado e funcional)
-   - Fundamentos + Trilhas + Módulos por trilha
-   - Modal/Overlay único
-   - Progresso salva no localStorage
-   ================================================== */
+// ==========================
+// DADOS
+// ==========================
 
-/* ==========================
-   DADOS (Fundamentos)
-   ========================== */
-//sessão fundamentos essenciais
+// sessão fundamentos essenciais
 const fundamentals = [
   {
     id: "apresentacao",
@@ -310,19 +304,13 @@ const fundamentals = [
   }
 ];
 
-/* ==========================
-   DADOS (Cards de trilhas)
-   ========================== */
 const tracks = [
-  { id:"t-recepcao", title:"Recepção", desc:"Atendimento ao cliente, agendamentos e pagamentos", modules:8,  done:1, icon: iconPeople() },
-  { id:"t-cabelos",  title:"Cabeleireiros", desc:"Cortes, colorimetria, alongamentos e tratamentos", modules:12, done:4, icon: iconSmile() },
-  { id:"t-barbeiros",title:"Barbeiros", desc:"Navalha clássica, acabamento e tratamento facial", modules:6,  done:3, icon: iconBeard() },
-  { id:"t-gestao",   title:"Gestão", desc:"Financeiro, recursos humanos e relatórios", modules:5,  done:1, icon: iconChart() }
+  { id:"t-recepcao", title:"Recepção",     desc:"Atendimento ao cliente, agendamentos e pagamentos",          modules:8,  done:1, icon: iconPeople() },
+  { id:"t-cabelos",  title:"Cabeleireiros", desc:"Cortes, colorimetria, alongamentos e tratamentos",          modules:12, done:4, icon: iconSmile() },
+  { id:"t-barbeiros",title:"Barbeiros",     desc:"Navalha clássica, acabamento e tratamento facial",          modules:6,  done:3, icon: iconBeard() },
+  { id:"t-gestao",   title:"Gestão",        desc:"Financeiro, recursos humanos e relatórios",                modules:5,  done:1, icon: iconChart() }
 ];
 
-/* ==========================
-   DADOS (Módulos por trilha)
-   ========================== */
 const trackModules = {
   recepcao: [
     {
@@ -333,11 +321,8 @@ const trackModules = {
       icon: iconPeople(),
       status: "none",
       dots: 3,
-      content: `
-        <h4>PADRÃO DE ATENDIMENTO — RECEPÇÃO</h4>
-        <p>Conteúdo em construção. Aqui vai o protocolo completo.</p>
-      `
-    }
+      content: `<h4>PADRÃO DE ATENDIMENTO — RECEPÇÃO</h4><p>Conteúdo em construção. Aqui vai o protocolo completo.</p>`
+    },
   ],
   cabeleireiros: [
     {
@@ -348,11 +333,8 @@ const trackModules = {
       icon: iconSmile(),
       status: "none",
       dots: 3,
-      content: `
-        <h4>DIAGNÓSTICO CAPILAR</h4>
-        <p>Conteúdo em construção.</p>
-      `
-    }
+      content: `<h4>DIAGNÓSTICO CAPILAR</h4><p>Conteúdo em construção.</p>`
+    },
   ],
   barbeiros: [
     {
@@ -363,11 +345,8 @@ const trackModules = {
       icon: iconBeard(),
       status: "none",
       dots: 3,
-      content: `
-        <h4>ACABAMENTO & POSTURA</h4>
-        <p>Conteúdo em construção.</p>
-      `
-    }
+      content: `<h4>ACABAMENTO & POSTURA</h4><p>Conteúdo em construção.</p>`
+    },
   ],
   gestao: [
     {
@@ -378,17 +357,14 @@ const trackModules = {
       icon: iconChart(),
       status: "none",
       dots: 3,
-      content: `
-        <h4>ROTINA ADMINISTRATIVA</h4>
-        <p>Conteúdo em construção.</p>
-      `
-    }
-  ]
+      content: `<h4>ROTINA ADMINISTRATIVA</h4><p>Conteúdo em construção.</p>`
+    },
+  ],
 };
 
-/* ==========================
-   STORAGE (estado)
-   ========================== */
+// ==========================
+// STORAGE (estado)
+// ==========================
 const KEY = "vanelle_mvp_state_v1";
 const state = loadState();
 
@@ -410,62 +386,40 @@ function saveState(){
   localStorage.setItem(KEY, JSON.stringify(state));
 }
 
-/* ==========================
-   HELPERS (módulos)
-   ========================== */
-function getAllModules(){
-  const list = [...fundamentals];
-  for(const key of Object.keys(trackModules)){
-    list.push(...(trackModules[key] || []));
-  }
-  return list;
-}
-function findModuleById(id){
-  return getAllModules().find(m => m.id === id) || null;
-}
-
-/* ==========================
-   DOM refs
-   ========================== */
-const fundGrid = document.getElementById("fundGrid");
+// ==========================
+// ELEMENTOS
+// ==========================
+const fundGrid   = document.getElementById("fundGrid");
 const tracksGrid = document.getElementById("tracksGrid");
 const overallPct = document.getElementById("overallPct");
 const overallBar = document.getElementById("overallBar");
-const nextHint = document.getElementById("nextHint");
+const nextHint   = document.getElementById("nextHint");
 
-// modal refs
-const overlay = document.getElementById("overlay");
-const closeModalBtn = document.getElementById("closeModal");
-const backBtn = document.getElementById("backBtn");
-const markProgressBtn = document.getElementById("markProgressBtn");
-const modalTitle = document.getElementById("modalTitle");
-const modalTime = document.getElementById("modalTime");
-const modalStatus = document.getElementById("modalStatus");
-const modalBody = document.getElementById("modalBody");
-const modalIcon = document.getElementById("modalIcon");
-
-let currentModuleId = null;
-
-/* ==========================
-   Badges (sidebar)
-   ========================== */
-document.getElementById("badge-recepcao").textContent = tracks.find(t=>t.title==="Recepção")?.modules ?? 8;
+// badges (menu)
+document.getElementById("badge-recepcao").textContent      = tracks.find(t=>t.title==="Recepção")?.modules ?? 8;
 document.getElementById("badge-cabeleireiros").textContent = tracks.find(t=>t.title==="Cabeleireiros")?.modules ?? 12;
-document.getElementById("badge-barbeiros").textContent = tracks.find(t=>t.title==="Barbeiros")?.modules ?? 6;
-document.getElementById("badge-gestao").textContent = tracks.find(t=>t.title==="Gestão")?.modules ?? 5;
+document.getElementById("badge-barbeiros").textContent     = tracks.find(t=>t.title==="Barbeiros")?.modules ?? 6;
+document.getElementById("badge-gestao").textContent        = tracks.find(t=>t.title==="Gestão")?.modules ?? 5;
 
-/* ==========================
-   Aplicar status salvo (TODOS os módulos)
-   ========================== */
-for(const m of getAllModules()){
+// aplica status salvo (fundamentals)
+for(const m of fundamentals){
   if(state.moduleStatus[m.id]){
     m.status = state.moduleStatus[m.id];
   }
 }
 
-/* ==========================
-   Render: Fundamentos
-   ========================== */
+// aplica status salvo (trackModules)
+for(const sectionKey of Object.keys(trackModules)){
+  for(const m of trackModules[sectionKey]){
+    if(state.moduleStatus[m.id]){
+      m.status = state.moduleStatus[m.id];
+    }
+  }
+}
+
+// ==========================
+// RENDER
+// ==========================
 function renderFundamentals(){
   if(!fundGrid) return;
   fundGrid.innerHTML = "";
@@ -491,14 +445,11 @@ function renderFundamentals(){
       </div>
     `;
 
-    el.addEventListener("click", () => openAnyModule(m.id));
+    el.addEventListener("click", () => openModule(m.id));
     fundGrid.appendChild(el);
   });
 }
 
-/* ==========================
-   Render: Cards de Trilhas (topo)
-   ========================== */
 function renderTracks(){
   if(!tracksGrid) return;
   tracksGrid.innerHTML = "";
@@ -537,9 +488,6 @@ function renderTracks(){
   });
 }
 
-/* ==========================
-   Render: Módulos dentro das Trilhas (seções)
-   ========================== */
 function renderTrackSection(sectionKey){
   const grid = document.getElementById(`grid-${sectionKey}`);
   if(!grid) return;
@@ -568,17 +516,61 @@ function renderTrackSection(sectionKey){
       </div>
     `;
 
-    el.addEventListener("click", () => openAnyModule(m.id));
+    el.addEventListener("click", () => openCustomModule(m));
     grid.appendChild(el);
   });
 }
 
-/* ==========================
-   Modal/Overlay: abrir/fechar
-   ========================== */
-function openAnyModule(id){
-  const m = findModuleById(id);
+function computeOverall(){
+  const total = fundamentals.length + tracks.reduce((a,t)=>a+t.modules,0);
+  const fundDone = fundamentals.filter(m => m.status === "done").length;
+  const tracksDone = tracks.reduce((a,t)=>a+t.done,0);
+
+  const done = fundDone + tracksDone;
+  const pct = Math.max(0, Math.min(100, Math.round((done/total)*100)));
+
+  overallPct.textContent = pct + "%";
+  overallBar.style.width = pct + "%";
+
+  const next = fundamentals.find(m => m.status !== "done") || fundamentals[0];
+  nextHint.textContent = next ? `Próximo módulo: ${next.title}` : "Próximo módulo: —";
+}
+
+// ==========================
+// MODAL / OVERLAY
+// ==========================
+const overlay         = document.getElementById("overlay");
+const closeModalBtn   = document.getElementById("closeModal");
+const backBtn         = document.getElementById("backBtn");
+const markProgressBtn = document.getElementById("markProgressBtn");
+
+const modalTitle  = document.getElementById("modalTitle");
+const modalTime   = document.getElementById("modalTime");
+const modalStatus = document.getElementById("modalStatus");
+const modalBody   = document.getElementById("modalBody");
+const modalIcon   = document.getElementById("modalIcon");
+
+let currentModuleId = null;
+
+function openModule(id){
+  const m = fundamentals.find(x => x.id === id);
   if(!m) return;
+
+  currentModuleId = id;
+
+  modalTitle.textContent = m.title;
+  modalTime.textContent = "⏱ " + m.timeMin + " min";
+  modalStatus.textContent = statusLabel(m.status);
+  modalIcon.innerHTML = m.icon;
+  modalBody.innerHTML = m.content;
+
+  overlay.classList.add("show");
+  overlay.setAttribute("aria-hidden","false");
+  document.body.classList.add("module-open");
+  overlay.scrollTop = 0;
+}
+
+function openCustomModule(m){
   currentModuleId = m.id;
 
   modalTitle.textContent = m.title;
@@ -596,6 +588,8 @@ function openAnyModule(id){
 function closeModule(){
   overlay.classList.remove("show");
   overlay.setAttribute("aria-hidden","true");
+
+  // ✅ AQUI entra o remove
   document.body.classList.remove("module-open");
   currentModuleId = null;
 }
@@ -604,38 +598,46 @@ overlay.addEventListener("click", (e) => { if(e.target === overlay) closeModule(
 closeModalBtn.addEventListener("click", closeModule);
 backBtn.addEventListener("click", closeModule);
 
-document.addEventListener("keydown", (e) => {
-  if(e.key === "Escape" && overlay.classList.contains("show")) closeModule();
-});
-
-/* ==========================
-   Progresso (botão do modal)
-   ========================== */
 markProgressBtn.addEventListener("click", () => {
   if(!currentModuleId) return;
 
-  const m = findModuleById(currentModuleId);
+  // tenta achar no fundamentals
+  let m = fundamentals.find(x => x.id === currentModuleId);
+
+  // se não tiver, tenta achar nos trackModules
+  if(!m){
+    for(const key of Object.keys(trackModules)){
+      const found = trackModules[key].find(x => x.id === currentModuleId);
+      if(found){ m = found; break; }
+    }
+  }
+
   if(!m) return;
 
   const next = m.status === "none" ? "progress" : (m.status === "progress" ? "done" : "none");
   m.status = next;
+
   state.moduleStatus[m.id] = next;
   saveState();
 
   modalStatus.textContent = statusLabel(m.status);
 
-  // re-render tudo que pode ter mudado
   renderFundamentals();
   renderTrackSection("recepcao");
   renderTrackSection("cabeleireiros");
   renderTrackSection("barbeiros");
   renderTrackSection("gestao");
+
   computeOverall();
 });
 
-/* ==========================
-   Navegação / active section
-   ========================== */
+document.addEventListener("keydown", (e) => {
+  if(e.key === "Escape" && overlay.classList.contains("show")) closeModule();
+});
+
+// ==========================
+// NAVEGAÇÃO / ACTIVE SECTION
+// ==========================
 const nav = document.getElementById("nav");
 const navLinks = Array.from(nav.querySelectorAll("a[data-section]"));
 
@@ -656,18 +658,20 @@ nav.addEventListener("click", (e) => {
   const a = e.target.closest("a[data-section]");
   if(!a) return;
   e.preventDefault();
+
   const section = a.dataset.section;
   scrollToSection(section, true);
   closeDrawer();
 });
 
 // detect section on scroll
-const sections = ["home","fundamentos","recepcao","cabeleireiros","barbeiros","gestao"];
+const sections = ["home","fundamentos","trilhas","recepcao","cabeleireiros","barbeiros","gestao"];
 let ticking = false;
 
 window.addEventListener("scroll", () => {
   if(ticking) return;
   ticking = true;
+
   requestAnimationFrame(() => {
     state.scrollY = window.scrollY;
     saveState();
@@ -691,9 +695,9 @@ function getCurrentSection(){
   return "home";
 }
 
-/* ==========================
-   Mobile drawer
-   ========================== */
+// ==========================
+// MOBILE DRAWER
+// ==========================
 const sidebar = document.getElementById("sidebar");
 const drawerOverlay = document.getElementById("drawerOverlay");
 const hamb = document.getElementById("hamb");
@@ -704,6 +708,7 @@ function openDrawer(){
   drawerOverlay.setAttribute("aria-hidden","false");
   document.body.style.overflow = "hidden";
 }
+
 function closeDrawer(){
   sidebar.classList.remove("open");
   drawerOverlay.classList.remove("show");
@@ -718,42 +723,22 @@ window.addEventListener("resize", () => {
   if(window.innerWidth > 820) closeDrawer();
 });
 
-/* ==========================
-   Continue button
-   ========================== */
+// ==========================
+// CONTINUE BUTTON
+// ==========================
 document.getElementById("continueBtn").addEventListener("click", () => {
   const next = fundamentals.find(m => m.status !== "done") || fundamentals[0];
-  if(next) openAnyModule(next.id);
+  if(next) openModule(next.id);
 });
 
-/* ==========================
-   Progresso geral
-   ========================== */
-function computeOverall(){
-  // Mantive seu cálculo original (baseado em fundamentals + números das trilhas)
-  // Se depois você quiser, eu ajusto para calcular com base em TODOS os módulos reais.
-  const total = fundamentals.length + tracks.reduce((a,t)=>a+t.modules,0);
-  const fundDone = fundamentals.filter(m => m.status === "done").length;
-  const tracksDone = tracks.reduce((a,t)=>a+t.done,0);
-
-  const done = fundDone + tracksDone;
-  const pct = Math.max(0, Math.min(100, Math.round((done/total)*100)));
-
-  overallPct.textContent = pct + "%";
-  overallBar.style.width = pct + "%";
-
-  const next = fundamentals.find(m => m.status !== "done") || fundamentals[0];
-  nextHint.textContent = next ? `Próximo módulo: ${next.title}` : "Próximo módulo: —";
-}
-
-/* ==========================
-   INIT
-   ========================== */
+// ==========================
+// INIT
+// ==========================
 function init(){
   renderFundamentals();
   renderTracks();
 
-  // renderiza módulos dentro de cada trilha
+  // ✅ AQUI entra o renderTrackSection(...)
   renderTrackSection("recepcao");
   renderTrackSection("cabeleireiros");
   renderTrackSection("barbeiros");
@@ -772,9 +757,9 @@ function init(){
 }
 init();
 
-/* ==========================
-   Helpers
-   ========================== */
+// ==========================
+// HELPERS
+// ==========================
 function statusLabel(s){
   if(s === "done") return "Concluído";
   if(s === "progress") return "Em progresso";
@@ -802,9 +787,9 @@ function escapeHTML(str){
     .replaceAll("'","&#039;");
 }
 
-/* ==========================
-   Icons (SVG inline)
-   ========================== */
+// ==========================
+// ICONS (SVG inline)
+// ==========================
 function iconClock(){
   return `
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -903,7 +888,4 @@ function iconChart(){
       <path d="M20 19V10"></path>
     </svg>
   `;
-}
-/* ==========================
-   FIM
-   ========================== */    
+} 

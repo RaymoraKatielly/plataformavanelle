@@ -163,39 +163,49 @@
           <div class="tracks" id="tracksGrid" aria-label="Trilhas por função"></div>
         </section>
 
-        <!-- Seções âncora para menu -->
-       <section id="recepcao" data-section="recepcao" style="margin-top:24px">
-  <div class="section-head">
-    <h3>Recepção</h3>
-    <span class="pill">Trilha</span>
+        <!-- Trilhas detalhadas (módulos por setor) -->
+<section id="trilhas-detalhadas" data-section="trilhas-detalhadas" style="margin-top:24px">
+  <div class="track-sections">
+    <div class="track-section" id="sec-recepcao">
+      <div class="section-head mini">
+        <h3>Recepção</h3>
+        <span class="pill">Trilha</span>
+      </div>
+      <div class="grid" id="grid-recepcao" aria-label="Módulos da Recepção"></div>
+    </div>
+
+    <div class="track-section" id="sec-cabeleireiros">
+      <div class="section-head mini">
+        <h3>Cabeleireiros</h3>
+        <span class="pill">Trilha</span>
+      </div>
+      <div class="grid" id="grid-cabeleireiros" aria-label="Módulos dos Cabeleireiros"></div>
+    </div>
+
+    <div class="track-section" id="sec-barbeiros">
+      <div class="section-head mini">
+        <h3>Barbeiros</h3>
+        <span class="pill">Trilha</span>
+      </div>
+      <div class="grid" id="grid-barbeiros" aria-label="Módulos dos Barbeiros"></div>
+    </div>
+
+    <div class="track-section" id="sec-gestao">
+      <div class="section-head mini">
+        <h3>Gestão</h3>
+        <span class="pill">Trilha</span>
+      </div>
+      <div class="grid" id="grid-gestao" aria-label="Módulos da Gestão"></div>
+    </div>
   </div>
-  <div class="grid" id="grid-recepcao"></div>
 </section>
 
-<section id="cabeleireiros" data-section="cabeleireiros" style="margin-top:24px">
-  <div class="section-head">
-    <h3>Cabeleireiros</h3>
-    <span class="pill">Trilha</span>
-  </div>
-  <div class="grid" id="grid-cabeleireiros"></div>
-</section>
-
-<section id="barbeiros" data-section="barbeiros" style="margin-top:24px">
-  <div class="section-head">
-    <h3>Barbeiros</h3>
-    <span class="pill">Trilha</span>
-  </div>
-  <div class="grid" id="grid-barbeiros"></div>
-</section>
-
-<section id="gestao" data-section="gestao" style="margin-top:24px">
-  <div class="section-head">
-    <h3>Gestão</h3>
-    <span class="pill">Trilha</span>
-  </div>
-  <div class="grid" id="grid-gestao"></div>
-</section>
-        <!-- Fim seções âncora para menu -->
+<!-- Seções âncora para menu (menu lateral) -->
+<section id="recepcao" data-section="recepcao" style="margin-top:24px"></section>
+<section id="cabeleireiros" data-section="cabeleireiros" style="margin-top:24px"></section>
+<section id="barbeiros" data-section="barbeiros" style="margin-top:24px"></section>
+<section id="gestao" data-section="gestao" style="margin-top:24px"></section>
+<!-- Fim das trilhas detalhadas -->
 
         <div class="cta">
           <button class="btn" id="continueBtn" type="button">
