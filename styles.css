@@ -849,3 +849,149 @@ body.module-open{
 }
 
 /* ================================================== */
+
+/* ==================================================
+   VANÉLLE — ESCALA VISUAL UNIFICADA (GLOBAL)
+   Fundamentos + Trilhas + Modal
+   Cole no FINAL do styles.css
+   ================================================== */
+
+:root{
+  /* escala tipográfica */
+  --t-title: 18px;      /* títulos de cards */
+  --t-sub: 13px;        /* descrições */
+  --t-meta: 12px;       /* metas/tempo/status */
+
+  /* escala de ícones */
+  --ico-card: 34px;     /* tile de ícone em cards/trilhas */
+  --ico-card-r: 11px;   /* raio do tile */
+  --ico-svg: 18px;      /* tamanho do svg dentro do tile */
+
+  /* escala de seção */
+  --h-section: 28px;    /* “Fundamentos Essenciais”, “Trilhas por Função” */
+}
+
+/* ========== SEÇÕES (títulos grandes) ========== */
+.section-head h3{
+  font-size: var(--h-section);
+  line-height: 1.08;
+}
+
+/* ========== PADRÃO DE ÍCONE (Fundamentos + Trilhas) ========== */
+.icon-tile{
+  width: var(--ico-card) !important;
+  height: var(--ico-card) !important;
+  border-radius: var(--ico-card-r) !important;
+  display: grid;
+  place-items: center;
+}
+
+.icon-tile svg{
+  width: var(--ico-svg) !important;
+  height: var(--ico-svg) !important;
+}
+
+/* ========== FUNDAMENTOS (cards) ========== */
+.card h4{
+  font-size: var(--t-title) !important;
+  line-height: 1.15;
+}
+
+.card p{
+  font-size: var(--t-sub) !important;
+  line-height: 1.35;
+  max-width: 46ch;
+}
+
+.card .time,
+.card .status{
+  font-size: var(--t-meta) !important;
+}
+
+/* Deixa o topo do card mais “alinhado” */
+.card-top{
+  align-items: center;
+}
+.time{
+  opacity: .9;
+}
+
+/* ========== TRILHAS (cards grandes) ========== */
+.track h4{
+  font-size: var(--t-title) !important;
+  line-height: 1.15;
+}
+
+.track .desc{
+  font-size: var(--t-sub) !important;
+  line-height: 1.35;
+  max-width: 52ch;
+}
+
+.track .foot{
+  font-size: var(--t-meta) !important;
+}
+
+/* O número de módulos (12, 8 etc) fica mais proporcional */
+.mods{
+  font-size: 18px !important;
+}
+.mods small{
+  font-size: 11.5px !important;
+}
+
+/* Garante que o layout interno do track siga o padrão do card */
+.track-title{
+  align-items: center;
+}
+
+/* ========== MODAL / PÁGINA DO MÓDULO ========== */
+/* Ícone do cabeçalho mais discreto */
+.modal-head .icon-tile{
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 10px !important;
+}
+.modal-head .icon-tile svg{
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* Título do módulo com escala consistente */
+.modal-head h3{
+  font-size: 22px;
+  line-height: 1.12;
+}
+.modal-head .meta{
+  font-size: var(--t-meta);
+}
+
+/* Corpo de leitura confortável */
+.modal-body{
+  max-width: 68ch;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+.modal-body h4{
+  font-size: 18px;
+}
+.modal-body p,
+.modal-body li{
+  font-size: 14px;
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 980px){
+  :root{ --h-section: 26px; }
+}
+
+@media (max-width: 620px){
+  :root{
+    --t-title: 17px;
+    --t-sub: 13px;
+    --ico-card: 32px;
+    --ico-svg: 17px;
+    --h-section: 24px;
+  }
+  .card p, .track .desc{ max-width: 100%; }
+}
