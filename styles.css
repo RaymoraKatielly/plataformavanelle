@@ -821,4 +821,16 @@ body.module-open{
   overflow: hidden;
 }
 
+/* Ícones dos cards — mais discretos */
+.card .icon-tile{
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+}
+
+.card .icon-tile svg{
+  width: 18px;
+  height: 18px;
+}
+
 /* ================================================== */
