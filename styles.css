@@ -995,3 +995,138 @@ body.module-open{
   }
   .card p, .track .desc{ max-width: 100%; }
 }
+
+/* ==================================================
+   VANÉLLE — ACABAMENTO PREMIUM (ALINHAMENTO + RITMO)
+   Fundamentos + Trilhas + CTA + Espaçamentos
+   Cole no FINAL do styles.css
+   ================================================== */
+
+/* 1) Ritmo geral das seções */
+#fundamentos, #trilhas{
+  scroll-margin-top: 18px;
+}
+
+.section-head{
+  margin: 22px 0 14px;
+  gap: 14px;
+}
+
+.section-head h3{
+  margin: 0;
+}
+
+/* 2) Cards de Fundamentos — altura e alinhamento consistente */
+.card{
+  min-height: 176px;             /* mais elegante */
+  padding: 16px 16px 14px;
+  gap: 10px;
+}
+
+.card h4{
+  margin-top: 6px;
+}
+
+.card p{
+  margin-top: 2px;
+}
+
+/* Topo do card: ícone + tempo alinhados no mesmo eixo */
+.card-top{
+  align-items: center;
+}
+
+/* Rodapé do card sempre “encaixado” */
+.card-bottom{
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+/* 3) Trilhas — padronizar “tile” e espaçamento interno */
+.track{
+  padding: 16px 16px 14px;
+  border-radius: var(--radius);
+}
+
+.track-top{
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.track-title{
+  align-items: center;
+}
+
+.track .desc{
+  margin-top: 4px;
+}
+
+/* 4) Barras de progresso — mais finas e chiques */
+.track .pbar,
+.bar{
+  height: 9px;
+}
+
+/* 5) Tipografia — suaviza o contraste e melhora leitura */
+.card p,
+.track .desc,
+.modal-body p,
+.modal-body li{
+  color: rgba(43,31,22,.72);
+}
+
+/* 6) Dots — mais discretos e consistentes */
+.dots span{
+  width: 6px;
+  height: 6px;
+  opacity: .95;
+}
+.dots span.on{
+  opacity: 1;
+}
+
+/* 7) CTA — melhor “presença” e centralização premium */
+.cta{
+  margin: 34px auto 8px;
+}
+
+.btn{
+  min-width: 280px;
+  border-radius: 16px;
+  padding: 15px 20px;
+  letter-spacing: .3px;
+}
+
+/* Nota “Próximo módulo” mais alinhada com a identidade */
+.small-note{
+  margin-top: 6px;
+  letter-spacing: .02em;
+}
+
+/* 8) Grid — garante alinhamento visual mesmo com textos diferentes */
+.grid{
+  align-items: stretch;
+}
+.card{
+  height: 100%;
+}
+
+/* 9) Micro-ajuste: ícone e texto não brigarem */
+.icon-tile{
+  box-shadow: var(--shadow-sm);
+}
+
+/* 10) Mobile: mantém respiro sem ficar “apertado” */
+@media (max-width: 620px){
+  .card{
+    min-height: 168px;
+    padding: 16px 14px 14px;
+  }
+  .track{
+    padding: 16px 14px 14px;
+  }
+  .btn{
+    min-width: 100%;
+  }
+}
+/* ================================================== */
