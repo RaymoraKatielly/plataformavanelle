@@ -606,6 +606,37 @@ function init(){
 }
 init();
 
+// ====== Full-page module behavior (trava fundo + restaura scroll) ======
+let __lastScrollY = 0;
+
+function openModuleView() {
+  __lastScrollY = window.scrollY || 0;
+
+  // mostra overlay (sua "página")
+  overlay.classList.add("show");
+  overlay.setAttribute("aria-hidden", "false");
+
+  // trava scroll do fundo
+  document.body.classList.add("module-open");
+
+  // garante que abre no topo da "página"
+  overlay.scrollTop = 0;
+
+  // fallback: em alguns browsers ajuda a evitar salto
+  window.scrollTo(0, 0);
+}
+
+function closeModuleView() {
+  overlay.classList.remove("show");
+  overlay.setAttribute("aria-hidden", "true");
+
+  // destrava scroll do fundo
+  document.body.classList.remove("module-open");
+
+  // volta exatamente onde estava antes de abrir o módulo
+  window.scrollTo(0, __lastScrollY);
+}
+
 /* ==========================
    Helpers
    ========================== */
