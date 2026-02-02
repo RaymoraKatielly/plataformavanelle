@@ -306,27 +306,6 @@ const fundamentals = [
       Aqui, <b>produto não é detalhe</b> — é parte essencial da experiência.
     </p>
 
-    <h4>TIPOS DE PRODUTOS UTILIZADOS</h4>
-
-    <ul>
-      <li>
-        <b>Tratamentos:</b> máscaras, cremes, ampolas e séruns de alta performance,
-        indicados conforme o diagnóstico individual de cada cliente.
-      </li>
-      <li>
-        <b>Finalização e Acabamento:</b> óleos, pomadas, mousses, leave-ins e finalizadores
-        que garantem definição, proteção e acabamento profissional.
-      </li>
-      <li>
-        <b>Proteção:</b> produtos com proteção térmica, proteção UV e ativos de tratamento
-        contínuo, essenciais para preservar a saúde dos fios e da pele.
-      </li>
-      <li>
-        <b>Higiene e Segurança:</b> desinfetantes, esterilizadores e produtos específicos
-        para higienização de ferramentas, superfícies e estações de trabalho.
-      </li>
-    </ul>
-
     <h4>CRITÉRIOS DE ESCOLHA</h4>
 
     <ul>
