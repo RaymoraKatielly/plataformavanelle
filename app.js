@@ -285,23 +285,82 @@ const fundamentals = [
     `
   },
   {
-    id: "produtos",
-    title: "Nossos Produtos",
-    timeMin: 60,
-    desc: "Tratamentos premium, finalizadores e proteção capilar de alta performance.",
-    icon: iconFlask(),
-    status: "none",
-    dots: 3,
-    content: `
-      <h4>Linha profissional Vanélle</h4>
-      <ul>
-        <li><b>Tratamentos:</b> máscaras, cremes e séruns premium.</li>
-        <li><b>Acabamento:</b> óleos, pomadas e finalizadores.</li>
-        <li><b>Higiene:</b> desinfetantes e esterilizadores profissionais.</li>
-        <li><b>Proteção:</b> protetores térmicos e leave-ins.</li>
-      </ul>
-    `
-  }
+  id: "produtos",
+  title: "Nossos Produtos",
+  timeMin: 60,
+  desc: "Critério, qualidade e responsabilidade no uso de produtos profissionais.",
+  icon: iconFlask(),
+  status: "none",
+  dots: 3,
+  content: `
+    <h4>NOSSOS PRODUTOS — PADRÃO VANÉLLE</h4>
+
+    <p>
+      No Vanélle Concept, os produtos utilizados em todos os atendimentos seguem um
+      <b>padrão rigoroso de qualidade, segurança e performance</b>.
+      Cada item é escolhido com critério técnico, responsabilidade profissional
+      e foco total no bem-estar e nos resultados entregues ao cliente.
+    </p>
+
+    <p>
+      Aqui, <b>produto não é detalhe</b> — é parte essencial da experiência.
+    </p>
+
+    <h4>TIPOS DE PRODUTOS UTILIZADOS</h4>
+
+    <ul>
+      <li>
+        <b>Tratamentos:</b> máscaras, cremes, ampolas e séruns de alta performance,
+        indicados conforme o diagnóstico individual de cada cliente.
+      </li>
+      <li>
+        <b>Finalização e Acabamento:</b> óleos, pomadas, mousses, leave-ins e finalizadores
+        que garantem definição, proteção e acabamento profissional.
+      </li>
+      <li>
+        <b>Proteção:</b> produtos com proteção térmica, proteção UV e ativos de tratamento
+        contínuo, essenciais para preservar a saúde dos fios e da pele.
+      </li>
+      <li>
+        <b>Higiene e Segurança:</b> desinfetantes, esterilizadores e produtos específicos
+        para higienização de ferramentas, superfícies e estações de trabalho.
+      </li>
+    </ul>
+
+    <h4>CRITÉRIOS DE ESCOLHA</h4>
+
+    <ul>
+      <li>✓ Qualidade comprovada e uso profissional</li>
+      <li>✓ Segurança para o cliente e para o profissional</li>
+      <li>✓ Procedência confiável</li>
+      <li>✓ Resultados reais e consistentes</li>
+      <li>✓ Compatibilidade com os protocolos técnicos da Vanélle</li>
+    </ul>
+
+    <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
+      <b>Produto certo, técnica correta e postura profissional</b>
+      são indispensáveis para manter o padrão Vanélle.
+    </p>
+
+    <h4>PADRÃO OBRIGATÓRIO</h4>
+
+    <ul>
+      <li>✓ É proibido utilizar produtos não autorizados pela gestão</li>
+      <li>✓ Todo produto deve ser usado conforme o protocolo técnico</li>
+      <li>✓ O profissional é responsável pelo uso correto e consciente</li>
+      <li>✓ Em caso de dúvida, o procedimento deve ser interrompido</li>
+    </ul>
+
+    <p>
+      No Vanélle Concept, acreditamos que <b>excelência é construída nos detalhes</b>.
+      Cuidar dos produtos é cuidar da marca, do cliente e do seu próprio crescimento profissional.
+    </p>
+
+    <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
+      <b>Beleza com responsabilidade, técnica e propósito.</b>
+    </p>
+  `
+}
 ];
 
 const tracks = [
