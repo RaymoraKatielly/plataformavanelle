@@ -731,17 +731,23 @@ h1{
 
 /* Ações fixas no rodapé (como “barra” de página) */
 .modal-actions{
-  position: sticky;
-  bottom: 0;
-  z-index: 2;
-  padding: 12px 18px;
-  background: rgba(246,241,231,.92);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid var(--border);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap: 10px;
+  justify-content: space-between;
+  padding: 16px 18px;
+}
+
+.modal-actions::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(124,92,67,.25),
+    transparent
+  );
 }
 
 /* Botões */
