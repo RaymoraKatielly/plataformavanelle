@@ -1,202 +1,209 @@
+/* ==================================================
+   VANÉLLE — app.js (organizado e funcional)
+   - Fundamentos + Trilhas + Módulos por trilha
+   - Modal/Overlay único
+   - Progresso salva no localStorage
+   ================================================== */
 
-   //sessão fundamentos essenciais
+/* ==========================
+   DADOS (Fundamentos)
+   ========================== */
+//sessão fundamentos essenciais
 const fundamentals = [
   {
-  id: "apresentacao",
-  title: "Apresentação Pessoal",
-  timeMin: 20,
-  desc: "Boas-vindas ao Vanélle Concept e o propósito que sustenta nossa excelência.",
-  icon: iconUser(),
-  status: "none",
-  dots: 3,
-  content: `
-    <h4>BEM-VINDO(A) AO VANÉLLE CONCEPT</h4>
-    <p>
-      Bem-vindo(a) ao <b>Vanélle Concept Beleza e Bem-Estar</b> — um espaço único, sonhado e construído com propósito.
-      Aqui, unimos <b>marcas</b>, <b>gestão</b> e <b>excelência</b> para entregar uma experiência completa em beleza e bem-estar.
-    </p>
+    id: "apresentacao",
+    title: "Apresentação Pessoal",
+    timeMin: 20,
+    desc: "Boas-vindas ao Vanélle Concept e o propósito que sustenta nossa excelência.",
+    icon: iconUser(),
+    status: "none",
+    dots: 3,
+    content: `
+      <h4>BEM-VINDO(A) AO VANÉLLE CONCEPT</h4>
+      <p>
+        Bem-vindo(a) ao <b>Vanélle Concept Beleza e Bem-Estar</b> — um espaço único, sonhado e construído com propósito.
+        Aqui, unimos <b>marcas</b>, <b>gestão</b> e <b>excelência</b> para entregar uma experiência completa em beleza e bem-estar.
+      </p>
 
-    <h4>NOSSAS MARCAS</h4>
-    <p>Dentro desse lugar abençoado, vivem duas marcas que carregam história e identidade:</p>
-    <ul>
-      <li>✓ <b>Morena Rosa Art e Beleza</b> — excelência em cuidados capilares e estética feminina</li>
-      <li>✓ <b>Barba Negra Barbearia</b> — ambiente exclusivo para barba e estilo masculino</li>
-    </ul>
+      <h4>NOSSAS MARCAS</h4>
+      <p>Dentro desse lugar abençoado, vivem duas marcas que carregam história e identidade:</p>
+      <ul>
+        <li>✓ <b>Morena Rosa Art e Beleza</b> — excelência em cuidados capilares e estética feminina</li>
+        <li>✓ <b>Barba Negra Barbearia</b> — ambiente exclusivo para barba e estilo masculino</li>
+      </ul>
 
-    <h4>POR QUE EXISTIMOS</h4>
-    <p>
-      Nós existimos por um motivo: <b>transformar pessoas na sua melhor versão</b>, com padrão, respeito e profissionalismo.
-    </p>
+      <h4>POR QUE EXISTIMOS</h4>
+      <p>
+        Nós existimos por um motivo: <b>transformar pessoas na sua melhor versão</b>, com padrão, respeito e profissionalismo.
+      </p>
 
-    <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
-      <b>Sua MELHOR VERSÃO… sempre no MELHOR LUGAR.</b>
-    </p>
+      <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
+        <b>Sua MELHOR VERSÃO… sempre no MELHOR LUGAR.</b>
+      </p>
 
-    <h4>NOSSA HISTÓRIA</h4>
-    <p>
-      Em <b>julho de 2010</b>, abrimos o <b>Morena Rosa Art e Beleza</b>. Desde então, crescemos com consistência, fé e trabalho diário.
-      O Morena Rosa nasceu em um momento difícil financeiramente — mas com um chamado no coração e um legado de família:
-      o amor pela beleza e pelo servir.
-    </p>
+      <h4>NOSSA HISTÓRIA</h4>
+      <p>
+        Em <b>julho de 2010</b>, abrimos o <b>Morena Rosa Art e Beleza</b>. Desde então, crescemos com consistência, fé e trabalho diário.
+        O Morena Rosa nasceu em um momento difícil financeiramente — mas com um chamado no coração e um legado de família:
+        o amor pela beleza e pelo servir.
+      </p>
 
-    <p>
-      Desde cedo, compreendemos algo que carregamos até hoje: <b>beleza também é ordem, organização e padrão</b>.
-      Quando chegamos em <b>Água Boa</b> com família pequena, recomeçamos do zero. Foram dias simples, difíceis e cheios de superação.
-      Mas Deus nos sustentou e, com trabalho intenso, visão e disciplina, construímos uma empresa sólida — com estrutura,
-      processos e uma cultura que respeita pessoas e valoriza profissionais.
-    </p>
+      <p>
+        Desde cedo, compreendemos algo que carregamos até hoje: <b>beleza também é ordem, organização e padrão</b>.
+        Quando chegamos em <b>Água Boa</b> com família pequena, recomeçamos do zero. Foram dias simples, difíceis e cheios de superação.
+        Mas Deus nos sustentou e, com trabalho intenso, visão e disciplina, construímos uma empresa sólida — com estrutura,
+        processos e uma cultura que respeita pessoas e valoriza profissionais.
+      </p>
 
-    <p>
-      Depois, nasceu a <b>Barba Negra Barbearia</b>: um ambiente exclusivo para homens, onde seguimos construindo uma marca forte,
-      com identidade e excelência.
-    </p>
+      <p>
+        Depois, nasceu a <b>Barba Negra Barbearia</b>: um ambiente exclusivo para homens, onde seguimos construindo uma marca forte,
+        com identidade e excelência.
+      </p>
 
-    <p>
-      Hoje, somamos <b>mais de 20 parceiros diretos</b> e <b>mais de 50 indiretos</b>, entre CLT, parceiros, sublocatários e especialistas
-      de apoio (contabilidade, jurídico, segurança do trabalho e outros).
-    </p>
+      <p>
+        Hoje, somamos <b>mais de 20 parceiros diretos</b> e <b>mais de 50 indiretos</b>, entre CLT, parceiros, sublocatários e especialistas
+        de apoio (contabilidade, jurídico, segurança do trabalho e outros).
+      </p>
 
-    <p>🙏 Só temos que agradecer a Deus por tudo que Ele tem nos proporcionado.</p>
+      <p>🙏 Só temos que agradecer a Deus por tudo que Ele tem nos proporcionado.</p>
 
-    <h4>NOSSA ESSÊNCIA</h4>
-    <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
-      <b>Contratamos caráter e treinamos habilidades.</b><br/>
-      <span style="color:rgba(43,31,22,.75)">E isso não é frase bonita: é critério.</span>
-    </p>
+      <h4>NOSSA ESSÊNCIA</h4>
+      <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
+        <b>Contratamos caráter e treinamos habilidades.</b><br/>
+        <span style="color:rgba(43,31,22,.75)">E isso não é frase bonita: é critério.</span>
+      </p>
 
-    <p>
-      Aqui, somos especialistas em fazer cada cliente sair daqui <b>melhor do que entrou</b> — por fora e por dentro,
-      com respeito, cuidado, técnica e postura.
-    </p>
-  `
-},
+      <p>
+        Aqui, somos especialistas em fazer cada cliente sair daqui <b>melhor do que entrou</b> — por fora e por dentro,
+        com respeito, cuidado, técnica e postura.
+      </p>
+    `
+  },
   {
-  id: "missao",
-  title: "Missão, Visão e Valores",
-  timeMin: 30,
-  desc: "Propósito, direção e princípios inegociáveis que sustentam o padrão Vanélle.",
-  icon: iconStar(),
-  status: "none",
-  dots: 3,
-  content: `
-    <h4>MISSÃO</h4>
-    <p>
-      Existimos para entregar <b>beleza com propósito</b>, <b>bem-estar com excelência</b> e
-      <b>identidade com significado</b>. Criamos experiências que transformam autoestima,
-      confiança e a forma como cada cliente se vê — sempre revelando a sua
-      <b>MELHOR VERSÃO</b>.
-    </p>
+    id: "missao",
+    title: "Missão, Visão e Valores",
+    timeMin: 30,
+    desc: "Propósito, direção e princípios inegociáveis que sustentam o padrão Vanélle.",
+    icon: iconStar(),
+    status: "none",
+    dots: 3,
+    content: `
+      <h4>MISSÃO</h4>
+      <p>
+        Existimos para entregar <b>beleza com propósito</b>, <b>bem-estar com excelência</b> e
+        <b>identidade com significado</b>. Criamos experiências que transformam autoestima,
+        confiança e a forma como cada cliente se vê — sempre revelando a sua
+        <b>MELHOR VERSÃO</b>.
+      </p>
 
-    <h4>VISÃO</h4>
-    <p>
-      Ser referência em <b>excelência</b>, <b>profissionalismo</b> e <b>experiência premium</b>
-      no segmento da beleza no <b>Vale do Araguaia</b>, com crescimento sustentável,
-      organização, inovação e reconhecimento pela satisfação dos clientes e pelo
-      desenvolvimento de profissionais.
-    </p>
+      <h4>VISÃO</h4>
+      <p>
+        Ser referência em <b>excelência</b>, <b>profissionalismo</b> e <b>experiência premium</b>
+        no segmento da beleza no <b>Vale do Araguaia</b>, com crescimento sustentável,
+        organização, inovação e reconhecimento pela satisfação dos clientes e pelo
+        desenvolvimento de profissionais.
+      </p>
 
-    <h4>VALORES (INEGOCIÁVEIS)</h4>
-    <ul>
-      <li>✓ <b>Excelência</b> — fazemos bem feito, sempre, em cada detalhe</li>
-      <li>✓ <b>Organização e processos</b> — nada é improvisado; seguimos padrão</li>
-      <li>✓ <b>Profissionalismo</b> — postura vem antes da habilidade</li>
-      <li>✓ <b>Respeito</b> — ao cliente, à equipe, aos parceiros e ao ambiente</li>
-      <li>✓ <b>Qualidade e segurança</b> — serviços responsáveis, técnicos e conscientes</li>
-      <li>✓ <b>Crescimento contínuo</b> — evolução profissional e pessoal constante</li>
-      <li>✓ <b>Responsabilidade coletiva</b> — cada ação impacta o todo</li>
-      <li>✓ <b>Honra, verdade, fé e legado</b> — crescemos com princípios</li>
-    </ul>
+      <h4>VALORES (INEGOCIÁVEIS)</h4>
+      <ul>
+        <li>✓ <b>Excelência</b> — fazemos bem feito, sempre, em cada detalhe</li>
+        <li>✓ <b>Organização e processos</b> — nada é improvisado; seguimos padrão</li>
+        <li>✓ <b>Profissionalismo</b> — postura vem antes da habilidade</li>
+        <li>✓ <b>Respeito</b> — ao cliente, à equipe, aos parceiros e ao ambiente</li>
+        <li>✓ <b>Qualidade e segurança</b> — serviços responsáveis, técnicos e conscientes</li>
+        <li>✓ <b>Crescimento contínuo</b> — evolução profissional e pessoal constante</li>
+        <li>✓ <b>Responsabilidade coletiva</b> — cada ação impacta o todo</li>
+        <li>✓ <b>Honra, verdade, fé e legado</b> — crescemos com princípios</li>
+      </ul>
 
-    <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
-      <b>Aqui, valores não são discurso.</b><br/>
-      São prática diária.
-    </p>
-  `
-}
-,
+      <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
+        <b>Aqui, valores não são discurso.</b><br/>
+        São prática diária.
+      </p>
+    `
+  },
   {
-  id: "conduta",
-  title: "Código de Conduta e Regulamento Interno",
-  timeMin: 25,
-  desc: "Princípios, normas, cultura e estrutura que orientam o comportamento na Vanélle.",
-  icon: iconDoc(),
-  status: "none",
-  dots: 3,
-  content: `
-    <h4>APRESENTAÇÃO</h4>
-    <p>
-      Este documento estabelece os <b>princípios</b>, <b>normas</b> e <b>diretrizes</b> que regulam
-      o comportamento, as responsabilidades e os direitos de todos os colaboradores do
-      <b>Vanélle Concept</b>.
-    </p>
+    id: "conduta",
+    title: "Código de Conduta e Regulamento Interno",
+    timeMin: 25,
+    desc: "Princípios, normas, cultura e estrutura que orientam o comportamento na Vanélle.",
+    icon: iconDoc(),
+    status: "none",
+    dots: 3,
+    content: `
+      <h4>APRESENTAÇÃO</h4>
+      <p>
+        Este documento estabelece os <b>princípios</b>, <b>normas</b> e <b>diretrizes</b> que regulam
+        o comportamento, as responsabilidades e os direitos de todos os colaboradores do
+        <b>Vanélle Concept</b>.
+      </p>
 
-    <h4>ORGANOGRAMA & AUTORIDADE</h4>
-    <p>
-      A Vanélle é uma empresa estruturada. Clareza evita conflitos.
-      Conhecer a estrutura garante que cada decisão chegue ao lugar certo.
-    </p>
+      <h4>ORGANOGRAMA & AUTORIDADE</h4>
+      <p>
+        A Vanélle é uma empresa estruturada. Clareza evita conflitos.
+        Conhecer a estrutura garante que cada decisão chegue ao lugar certo.
+      </p>
 
-    <h4>ESTRUTURA EXECUTIVA</h4>
-    <ul>
-      <li>
-        ✓ <b>Diretora Geral & Criativa — Mirelle Sousa</b><br/>
-        Responsável por visão estratégica, criatividade, marca, experiência do cliente
-        e direção geral.
-      </li>
-      <li>
-        ✓ <b>Diretora Financeira & Administrativa — Vandriellen Alves Ferreira</b><br/>
-        Responsável por finanças, administração, processos internos e recursos humanos.
-      </li>
-    </ul>
+      <h4>ESTRUTURA EXECUTIVA</h4>
+      <ul>
+        <li>
+          ✓ <b>Diretora Geral & Criativa — Mirelle Sousa</b><br/>
+          Responsável por visão estratégica, criatividade, marca, experiência do cliente
+          e direção geral.
+        </li>
+        <li>
+          ✓ <b>Diretora Financeira & Administrativa — Vandriellen Alves Ferreira</b><br/>
+          Responsável por finanças, administração, processos internos e recursos humanos.
+        </li>
+      </ul>
 
-    <h4>ESTRUTURA DE CADA SETOR</h4>
-    <p>Todos os setores possuem:</p>
-    <ul>
-      <li>✓ Responsável definido — uma pessoa clara como referência</li>
-      <li>✓ Função clara — sabemos exatamente o que cada um faz</li>
-      <li>✓ Limite de atuação — autonomia dentro de fronteiras</li>
-    </ul>
+      <h4>ESTRUTURA DE CADA SETOR</h4>
+      <p>Todos os setores possuem:</p>
+      <ul>
+        <li>✓ Responsável definido — uma pessoa clara como referência</li>
+        <li>✓ Função clara — sabemos exatamente o que cada um faz</li>
+        <li>✓ Limite de atuação — autonomia dentro de fronteiras</li>
+      </ul>
 
-    <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
-      <b>Isso não é burocracia. É clareza.</b>
-    </p>
+      <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
+        <b>Isso não é burocracia. É clareza.</b>
+      </p>
 
-    <h4>RESPEITANDO O ORGANOGRAMA</h4>
-    <ul>
-      <li>✓ Decisões devem ser escaladas para o responsável correto</li>
-      <li>✓ Não pule etapas ou contorne o organograma</li>
-      <li>✓ Respeite os limites de autoridade de cada pessoa</li>
-      <li>✓ Em caso de dúvida, procure seu gestor direto</li>
-    </ul>
+      <h4>RESPEITANDO O ORGANOGRAMA</h4>
+      <ul>
+        <li>✓ Decisões devem ser escaladas para o responsável correto</li>
+        <li>✓ Não pule etapas ou contorne o organograma</li>
+        <li>✓ Respeite os limites de autoridade de cada pessoa</li>
+        <li>✓ Em caso de dúvida, procure seu gestor direto</li>
+      </ul>
 
-    <h4>CULTURA DO TIME</h4>
-    <p>Na Vanélle, acreditamos em princípios fundamentais:</p>
+      <h4>CULTURA DO TIME</h4>
+      <p>Na Vanélle, acreditamos em princípios fundamentais:</p>
 
-    <h4>CARÁTER VEM ANTES DA TÉCNICA</h4>
-    <p>
-      Você pode ser o profissional mais hábil do mercado, mas sem caráter não pertence aqui.
-      Honestidade, integridade e ética são <b>inegociáveis</b>.
-    </p>
+      <h4>CARÁTER VEM ANTES DA TÉCNICA</h4>
+      <p>
+        Você pode ser o profissional mais hábil do mercado, mas sem caráter não pertence aqui.
+        Honestidade, integridade e ética são <b>inegociáveis</b>.
+      </p>
 
-    <h4>ORGANIZAÇÃO GERA CRESCIMENTO</h4>
-    <p>
-      Uma empresa desorganizada é uma empresa que falha.
-      Aqui, tudo tem <b>ordem</b>, <b>padrão</b> e <b>processo</b>.
-    </p>
+      <h4>ORGANIZAÇÃO GERA CRESCIMENTO</h4>
+      <p>
+        Uma empresa desorganizada é uma empresa que falha.
+        Aqui, tudo tem <b>ordem</b>, <b>padrão</b> e <b>processo</b>.
+      </p>
 
-    <h4>POSTURA SUSTENTA RESULTADOS</h4>
-    <p>
-      Elegância, profissionalismo e respeito sustentam os resultados no longo prazo.
-    </p>
+      <h4>POSTURA SUSTENTA RESULTADOS</h4>
+      <p>
+        Elegância, profissionalismo e respeito sustentam os resultados no longo prazo.
+      </p>
 
-    <h4>FRASE-BASE DA NOSSA CULTURA</h4>
-    <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
-      <b>"Contratamos caráter. Habilidades, treinamos."</b><br/>
-      Aqui você sempre pode evoluir tecnicamente — mas caráter é não-negociável.
-    </p>
-  `
-}
-,
+      <h4>FRASE-BASE DA NOSSA CULTURA</h4>
+      <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
+        <b>"Contratamos caráter. Habilidades, treinamos."</b><br/>
+        Aqui você sempre pode evoluir tecnicamente — mas caráter é não-negociável.
+      </p>
+    `
+  },
   {
     id: "sistemas",
     title: "Sistemas Internos",
@@ -220,70 +227,69 @@ const fundamentals = [
     `
   },
   {
-  id: "higiene",
-  title: "Higiene, Segurança e Padrões de Excelência",
-  timeMin: 45,
-  desc: "Protocolos obrigatórios de higiene, segurança e postura profissional.",
-  icon: iconShield(),
-  status: "none",
-  dots: 3,
-  content: `
-    <h4>PROTOCOLOS DE HIGIENE, SEGURANÇA E EXCELÊNCIA</h4>
-    <p>
-      A higiene e a segurança são a <b>base da confiança</b> que nossos clientes depositam em nós.
-      Cada ação nessa área é um compromisso com a <b>vida</b> e o <b>bem-estar</b>.
-    </p>
+    id: "higiene",
+    title: "Higiene, Segurança e Padrões de Excelência",
+    timeMin: 45,
+    desc: "Protocolos obrigatórios de higiene, segurança e postura profissional.",
+    icon: iconShield(),
+    status: "none",
+    dots: 3,
+    content: `
+      <h4>PROTOCOLOS DE HIGIENE, SEGURANÇA E EXCELÊNCIA</h4>
+      <p>
+        A higiene e a segurança são a <b>base da confiança</b> que nossos clientes depositam em nós.
+        Cada ação nessa área é um compromisso com a <b>vida</b> e o <b>bem-estar</b>.
+      </p>
 
-    <h4>PADRÕES MÍNIMOS OBRIGATÓRIOS</h4>
-    <p>Estes padrões <b>NÃO são negociáveis</b>. São critério mínimo de funcionamento:</p>
+      <h4>PADRÕES MÍNIMOS OBRIGATÓRIOS</h4>
+      <p>Estes padrões <b>NÃO são negociáveis</b>. São critério mínimo de funcionamento:</p>
 
-    <h4>🧹 LIMPEZA E ORGANIZAÇÃO</h4>
-    <ul>
-      <li>✓ Bancada, carrinho e lavatório limpos após cada atendimento</li>
-      <li>✓ Ferramentas e instrumentos higienizados a cada uso</li>
-      <li>✓ Descarte adequado de resíduos e perfurocortantes</li>
-    </ul>
+      <h4>🧹 LIMPEZA E ORGANIZAÇÃO</h4>
+      <ul>
+        <li>✓ Bancada, carrinho e lavatório limpos após cada atendimento</li>
+        <li>✓ Ferramentas e instrumentos higienizados a cada uso</li>
+        <li>✓ Descarte adequado de resíduos e perfurocortantes</li>
+      </ul>
 
-    <h4>✅ SEGURANÇA DO CLIENTE</h4>
-    <ul>
-      <li>✓ Diagnóstico obrigatório antes de qualquer procedimento</li>
-      <li>✓ Cumprimento rigoroso dos protocolos técnicos</li>
-      <li>✓ Comunicação constante durante todo o atendimento</li>
-    </ul>
+      <h4>✅ SEGURANÇA DO CLIENTE</h4>
+      <ul>
+        <li>✓ Diagnóstico obrigatório antes de qualquer procedimento</li>
+        <li>✓ Cumprimento rigoroso dos protocolos técnicos</li>
+        <li>✓ Comunicação constante durante todo o atendimento</li>
+      </ul>
 
-    <h4>🗂️ ORGANIZAÇÃO INDIVIDUAL</h4>
-    <ul>
-      <li>✓ Você é responsável pela sua estação de trabalho</li>
-      <li>✓ Produtos, ferramentas e utensílios identificados e acessíveis</li>
-      <li>✓ Ambiente mantido limpo durante <b>TODO</b> o expediente</li>
-    </ul>
+      <h4>🗂️ ORGANIZAÇÃO INDIVIDUAL</h4>
+      <ul>
+        <li>✓ Você é responsável pela sua estação de trabalho</li>
+        <li>✓ Produtos, ferramentas e utensílios identificados e acessíveis</li>
+        <li>✓ Ambiente mantido limpo durante <b>TODO</b> o expediente</li>
+      </ul>
 
-    <h4>APRESENTAÇÃO PESSOAL</h4>
-    <p><b>Você é a imagem da marca.</b></p>
+      <h4>APRESENTAÇÃO PESSOAL</h4>
+      <p><b>Você é a imagem da marca.</b></p>
 
-    <h4>PADRÃO ESPERADO</h4>
-    <ul>
-      <li>✓ Vestimenta adequada e profissional</li>
-      <li>✓ Higiene pessoal impecável</li>
-      <li>✓ Cabelo alinhado</li>
-      <li>✓ Perfume suave — respeitando a sensibilidade do cliente</li>
-      <li>✓ Linguagem educada e respeitosa</li>
-      <li>✓ Postura elegante — sempre</li>
-    </ul>
+      <h4>PADRÃO ESPERADO</h4>
+      <ul>
+        <li>✓ Vestimenta adequada e profissional</li>
+        <li>✓ Higiene pessoal impecável</li>
+        <li>✓ Cabelo alinhado</li>
+        <li>✓ Perfume suave — respeitando a sensibilidade do cliente</li>
+        <li>✓ Linguagem educada e respeitosa</li>
+        <li>✓ Postura elegante — sempre</li>
+      </ul>
 
-    <h4>📵 CELULAR — USO APENAS PROFISSIONAL</h4>
-    <p>
-      Durante atendimentos, o celular deve permanecer <b>no bolso e no silencioso</b>.
-      Seu foco deve estar <b>100% no cliente</b>.
-    </p>
+      <h4>📵 CELULAR — USO APENAS PROFISSIONAL</h4>
+      <p>
+        Durante atendimentos, o celular deve permanecer <b>no bolso e no silencioso</b>.
+        Seu foco deve estar <b>100% no cliente</b>.
+      </p>
 
-    <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
-      <b>Elegância, discrição e postura.</b><br/>
-      Sempre.
-    </p>
-  `
-}
-,
+      <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
+        <b>Elegância, discrição e postura.</b><br/>
+        Sempre.
+      </p>
+    `
+  },
   {
     id: "produtos",
     title: "Nossos Produtos",
@@ -304,6 +310,19 @@ const fundamentals = [
   }
 ];
 
+/* ==========================
+   DADOS (Cards de trilhas)
+   ========================== */
+const tracks = [
+  { id:"t-recepcao", title:"Recepção", desc:"Atendimento ao cliente, agendamentos e pagamentos", modules:8,  done:1, icon: iconPeople() },
+  { id:"t-cabelos",  title:"Cabeleireiros", desc:"Cortes, colorimetria, alongamentos e tratamentos", modules:12, done:4, icon: iconSmile() },
+  { id:"t-barbeiros",title:"Barbeiros", desc:"Navalha clássica, acabamento e tratamento facial", modules:6,  done:3, icon: iconBeard() },
+  { id:"t-gestao",   title:"Gestão", desc:"Financeiro, recursos humanos e relatórios", modules:5,  done:1, icon: iconChart() }
+];
+
+/* ==========================
+   DADOS (Módulos por trilha)
+   ========================== */
 const trackModules = {
   recepcao: [
     {
@@ -318,7 +337,7 @@ const trackModules = {
         <h4>PADRÃO DE ATENDIMENTO — RECEPÇÃO</h4>
         <p>Conteúdo em construção. Aqui vai o protocolo completo.</p>
       `
-    },
+    }
   ],
   cabeleireiros: [
     {
@@ -333,7 +352,7 @@ const trackModules = {
         <h4>DIAGNÓSTICO CAPILAR</h4>
         <p>Conteúdo em construção.</p>
       `
-    },
+    }
   ],
   barbeiros: [
     {
@@ -348,7 +367,7 @@ const trackModules = {
         <h4>ACABAMENTO & POSTURA</h4>
         <p>Conteúdo em construção.</p>
       `
-    },
+    }
   ],
   gestao: [
     {
@@ -363,8 +382,8 @@ const trackModules = {
         <h4>ROTINA ADMINISTRATIVA</h4>
         <p>Conteúdo em construção.</p>
       `
-    },
-  ],
+    }
+  ]
 };
 
 /* ==========================
@@ -392,7 +411,21 @@ function saveState(){
 }
 
 /* ==========================
-   RENDER
+   HELPERS (módulos)
+   ========================== */
+function getAllModules(){
+  const list = [...fundamentals];
+  for(const key of Object.keys(trackModules)){
+    list.push(...(trackModules[key] || []));
+  }
+  return list;
+}
+function findModuleById(id){
+  return getAllModules().find(m => m.id === id) || null;
+}
+
+/* ==========================
+   DOM refs
    ========================== */
 const fundGrid = document.getElementById("fundGrid");
 const tracksGrid = document.getElementById("tracksGrid");
@@ -400,26 +433,49 @@ const overallPct = document.getElementById("overallPct");
 const overallBar = document.getElementById("overallBar");
 const nextHint = document.getElementById("nextHint");
 
-// badges
+// modal refs
+const overlay = document.getElementById("overlay");
+const closeModalBtn = document.getElementById("closeModal");
+const backBtn = document.getElementById("backBtn");
+const markProgressBtn = document.getElementById("markProgressBtn");
+const modalTitle = document.getElementById("modalTitle");
+const modalTime = document.getElementById("modalTime");
+const modalStatus = document.getElementById("modalStatus");
+const modalBody = document.getElementById("modalBody");
+const modalIcon = document.getElementById("modalIcon");
+
+let currentModuleId = null;
+
+/* ==========================
+   Badges (sidebar)
+   ========================== */
 document.getElementById("badge-recepcao").textContent = tracks.find(t=>t.title==="Recepção")?.modules ?? 8;
 document.getElementById("badge-cabeleireiros").textContent = tracks.find(t=>t.title==="Cabeleireiros")?.modules ?? 12;
 document.getElementById("badge-barbeiros").textContent = tracks.find(t=>t.title==="Barbeiros")?.modules ?? 6;
 document.getElementById("badge-gestao").textContent = tracks.find(t=>t.title==="Gestão")?.modules ?? 5;
 
-// apply stored status
-for(const m of fundamentals){
+/* ==========================
+   Aplicar status salvo (TODOS os módulos)
+   ========================== */
+for(const m of getAllModules()){
   if(state.moduleStatus[m.id]){
     m.status = state.moduleStatus[m.id];
   }
 }
 
+/* ==========================
+   Render: Fundamentos
+   ========================== */
 function renderFundamentals(){
+  if(!fundGrid) return;
   fundGrid.innerHTML = "";
+
   fundamentals.forEach((m) => {
     const el = document.createElement("button");
     el.type = "button";
     el.className = "card";
     el.setAttribute("data-id", m.id);
+
     el.innerHTML = `
       <div class="card-top">
         <div class="icon-tile" aria-hidden="true">${m.icon}</div>
@@ -434,11 +490,56 @@ function renderFundamentals(){
         <div class="status ${statusClass(m.status)}">${statusLabel(m.status)}</div>
       </div>
     `;
-    el.addEventListener("click", () => openModule(m.id));
+
+    el.addEventListener("click", () => openAnyModule(m.id));
     fundGrid.appendChild(el);
   });
 }
 
+/* ==========================
+   Render: Cards de Trilhas (topo)
+   ========================== */
+function renderTracks(){
+  if(!tracksGrid) return;
+  tracksGrid.innerHTML = "";
+
+  tracks.forEach((t) => {
+    const pct = Math.round((t.done / t.modules) * 100);
+    const el = document.createElement("button");
+    el.type = "button";
+    el.className = "track";
+
+    el.innerHTML = `
+      <div class="track-top">
+        <div class="track-title">
+          <div class="icon-tile" aria-hidden="true">${t.icon}</div>
+          <div style="min-width:0">
+            <h4>${escapeHTML(t.title)}</h4>
+            <div class="desc">${escapeHTML(t.desc)}</div>
+          </div>
+        </div>
+        <div class="mods">${t.modules}<small>módulos</small></div>
+      </div>
+      <div class="pbar" aria-hidden="true"><span style="width:${pct}%"></span></div>
+      <div class="foot">
+        <span>${t.done} de ${t.modules} concluídos</span>
+        <b>${pct}%</b>
+      </div>
+    `;
+
+    el.addEventListener("click", () => {
+      const map = { "Recepção":"recepcao", "Cabeleireiros":"cabeleireiros", "Barbeiros":"barbeiros", "Gestão":"gestao" };
+      const target = map[t.title] || "home";
+      scrollToSection(target, true);
+    });
+
+    tracksGrid.appendChild(el);
+  });
+}
+
+/* ==========================
+   Render: Módulos dentro das Trilhas (seções)
+   ========================== */
 function renderTrackSection(sectionKey){
   const grid = document.getElementById(`grid-${sectionKey}`);
   if(!grid) return;
@@ -467,14 +568,17 @@ function renderTrackSection(sectionKey){
       </div>
     `;
 
-    // abre o conteúdo no seu modal/overlay
-    el.addEventListener("click", () => openCustomModule(m));
+    el.addEventListener("click", () => openAnyModule(m.id));
     grid.appendChild(el);
   });
 }
 
-// abre um módulo vindo das trilhas (não do array fundamentals)
-function openCustomModule(m){
+/* ==========================
+   Modal/Overlay: abrir/fechar
+   ========================== */
+function openAnyModule(id){
+  const m = findModuleById(id);
+  if(!m) return;
   currentModuleId = m.id;
 
   modalTitle.textContent = m.title;
@@ -489,104 +593,28 @@ function openCustomModule(m){
   overlay.scrollTop = 0;
 }
 
-function renderTracks(){
-  tracksGrid.innerHTML = "";
-  tracks.forEach((t) => {
-    const pct = Math.round((t.done / t.modules) * 100);
-    const el = document.createElement("button");
-    el.type = "button";
-    el.className = "track";
-    el.innerHTML = `
-      <div class="track-top">
-        <div class="track-title">
-          <div class="icon-tile" aria-hidden="true">${t.icon}</div>
-          <div style="min-width:0">
-            <h4>${escapeHTML(t.title)}</h4>
-            <div class="desc">${escapeHTML(t.desc)}</div>
-          </div>
-        </div>
-        <div class="mods">${t.modules}<small>módulos</small></div>
-      </div>
-      <div class="pbar" aria-hidden="true"><span style="width:${pct}%"></span></div>
-      <div class="foot">
-        <span>${t.done} de ${t.modules} concluídos</span>
-        <b>${pct}%</b>
-      </div>
-    `;
-    el.addEventListener("click", () => {
-      const map = { "Recepção":"recepcao", "Cabeleireiros":"cabeleireiros", "Barbeiros":"barbeiros", "Gestão":"gestao" };
-      const target = map[t.title] || "home";
-      scrollToSection(target, true);
-    });
-    tracksGrid.appendChild(el);
-  });
-}
-
-function computeOverall(){
-  const total = fundamentals.length + tracks.reduce((a,t)=>a+t.modules,0);
-  const fundDone = fundamentals.filter(m => m.status === "done").length;
-  const tracksDone = tracks.reduce((a,t)=>a+t.done,0);
-
-  const done = fundDone + tracksDone;
-  const pct = Math.max(0, Math.min(100, Math.round((done/total)*100)));
-
-  overallPct.textContent = pct + "%";
-  overallBar.style.width = pct + "%";
-
-  const next = fundamentals.find(m => m.status !== "done") || fundamentals[0];
-  nextHint.textContent = next ? `Próximo módulo: ${next.title}` : "Próximo módulo: —";
-}
-
-/* ==========================
-   Modal (detalhes)
-   ========================== */
-const overlay = document.getElementById("overlay");
-const closeModalBtn = document.getElementById("closeModal");
-const backBtn = document.getElementById("backBtn");
-const markProgressBtn = document.getElementById("markProgressBtn");
-const modalTitle = document.getElementById("modalTitle");
-const modalTime = document.getElementById("modalTime");
-const modalStatus = document.getElementById("modalStatus");
-const modalBody = document.getElementById("modalBody");
-const modalIcon = document.getElementById("modalIcon");
-
-let currentModuleId = null;
-
-function openModule(id){
-  const m = fundamentals.find(x => x.id === id);
-  if(!m) return;
-  currentModuleId = id;
-
-  modalTitle.textContent = m.title;
-  modalTime.textContent = "⏱ " + m.timeMin + " min";
-  modalStatus.textContent = statusLabel(m.status);
-  modalIcon.innerHTML = m.icon;
-  modalBody.innerHTML = m.content;
-
-  overlay.classList.add("show");
-  overlay.setAttribute("aria-hidden","false");
-
-  // use sua classe padrão
-  document.body.classList.add("module-open");
-  overlay.scrollTop = 0;
-}
-
 function closeModule(){
   overlay.classList.remove("show");
   overlay.setAttribute("aria-hidden","true");
-
   document.body.classList.remove("module-open");
   currentModuleId = null;
 }
-
 
 overlay.addEventListener("click", (e) => { if(e.target === overlay) closeModule(); });
 closeModalBtn.addEventListener("click", closeModule);
 backBtn.addEventListener("click", closeModule);
 
+document.addEventListener("keydown", (e) => {
+  if(e.key === "Escape" && overlay.classList.contains("show")) closeModule();
+});
+
+/* ==========================
+   Progresso (botão do modal)
+   ========================== */
 markProgressBtn.addEventListener("click", () => {
   if(!currentModuleId) return;
-  const m = fundamentals.find(x => x.id === currentModuleId);
+
+  const m = findModuleById(currentModuleId);
   if(!m) return;
 
   const next = m.status === "none" ? "progress" : (m.status === "progress" ? "done" : "none");
@@ -595,12 +623,14 @@ markProgressBtn.addEventListener("click", () => {
   saveState();
 
   modalStatus.textContent = statusLabel(m.status);
-  renderFundamentals();
-  computeOverall();
-});
 
-document.addEventListener("keydown", (e) => {
-  if(e.key === "Escape" && overlay.classList.contains("show")) closeModule();
+  // re-render tudo que pode ter mudado
+  renderFundamentals();
+  renderTrackSection("recepcao");
+  renderTrackSection("cabeleireiros");
+  renderTrackSection("barbeiros");
+  renderTrackSection("gestao");
+  computeOverall();
 });
 
 /* ==========================
@@ -693,17 +723,37 @@ window.addEventListener("resize", () => {
    ========================== */
 document.getElementById("continueBtn").addEventListener("click", () => {
   const next = fundamentals.find(m => m.status !== "done") || fundamentals[0];
-  if(next) openModule(next.id);
+  if(next) openAnyModule(next.id);
 });
 
 /* ==========================
-   Init
+   Progresso geral
+   ========================== */
+function computeOverall(){
+  // Mantive seu cálculo original (baseado em fundamentals + números das trilhas)
+  // Se depois você quiser, eu ajusto para calcular com base em TODOS os módulos reais.
+  const total = fundamentals.length + tracks.reduce((a,t)=>a+t.modules,0);
+  const fundDone = fundamentals.filter(m => m.status === "done").length;
+  const tracksDone = tracks.reduce((a,t)=>a+t.done,0);
+
+  const done = fundDone + tracksDone;
+  const pct = Math.max(0, Math.min(100, Math.round((done/total)*100)));
+
+  overallPct.textContent = pct + "%";
+  overallBar.style.width = pct + "%";
+
+  const next = fundamentals.find(m => m.status !== "done") || fundamentals[0];
+  nextHint.textContent = next ? `Próximo módulo: ${next.title}` : "Próximo módulo: —";
+}
+
+/* ==========================
+   INIT
    ========================== */
 function init(){
   renderFundamentals();
   renderTracks();
 
-  // 👉 AQUI: renderiza os módulos das trilhas
+  // renderiza módulos dentro de cada trilha
   renderTrackSection("recepcao");
   renderTrackSection("cabeleireiros");
   renderTrackSection("barbeiros");
@@ -721,39 +771,7 @@ function init(){
     "Hoje (" + d.toLocaleDateString("pt-BR") + ")";
 }
 init();
-// ====== Full-page module behavior (trava fundo + restaura scroll) ======
-let __lastScrollY = 0;
 
-function openModuleView() {
-  __lastScrollY = window.scrollY || 0;
-
-  // mostra overlay (sua "página")
-  overlay.classList.add("show");
-  overlay.setAttribute("aria-hidden", "false");
-
-  // trava scroll do fundo
-  document.body.classList.add("module-open");
-
-  // garante que abre no topo da "página"
-  overlay.scrollTop = 0;
-
-  // fallback: em alguns browsers ajuda a evitar salto
-  window.scrollTo(0, 0);
-}
-
-function closeModule(){
-  overlay.classList.remove("show");
-  overlay.setAttribute("aria-hidden","true");
-
-  // destrava o scroll do fundo (padrão do seu CSS)
-  document.body.classList.remove("module-open");
-
-  currentModuleId = null;
-}
-
-  // volta exatamente onde estava antes de abrir o módulo
-  window.scrollTo(0, __lastScrollY);
-  
 /* ==========================
    Helpers
    ========================== */
@@ -886,3 +904,6 @@ function iconChart(){
     </svg>
   `;
 }
+/* ==========================
+   FIM
+   ========================== */    
