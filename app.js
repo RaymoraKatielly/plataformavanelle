@@ -304,12 +304,68 @@ const fundamentals = [
   }
 ];
 
-const tracks = [
-  { id:"t-recepcao", title:"Recepção", desc:"Atendimento ao cliente, agendamentos e pagamentos", modules:8,  done:1, icon: iconPeople() },
-  { id:"t-cabelos",  title:"Cabeleireiros", desc:"Cortes, colorimetria, alongamentos e tratamentos", modules:12, done:4, icon: iconSmile() },
-  { id:"t-barbeiros",title:"Barbeiros", desc:"Navalha clássica, acabamento e tratamento facial", modules:6,  done:3, icon: iconBeard() },
-  { id:"t-gestao",   title:"Gestão", desc:"Financeiro, recursos humanos e relatórios", modules:5,  done:1, icon: iconChart() }
-];
+const trackModules = {
+  recepcao: [
+    {
+      id: "r-01",
+      title: "Padrão de Atendimento na Recepção",
+      timeMin: 20,
+      desc: "Como receber, orientar e conduzir com excelência.",
+      icon: iconPeople(),
+      status: "none",
+      dots: 3,
+      content: `
+        <h4>PADRÃO DE ATENDIMENTO — RECEPÇÃO</h4>
+        <p>Conteúdo em construção. Aqui vai o protocolo completo.</p>
+      `
+    },
+  ],
+  cabeleireiros: [
+    {
+      id: "c-01",
+      title: "Diagnóstico Capilar Obrigatório",
+      timeMin: 25,
+      desc: "Perguntas-chave e registro antes do procedimento.",
+      icon: iconSmile(),
+      status: "none",
+      dots: 3,
+      content: `
+        <h4>DIAGNÓSTICO CAPILAR</h4>
+        <p>Conteúdo em construção.</p>
+      `
+    },
+  ],
+  barbeiros: [
+    {
+      id: "b-01",
+      title: "Acabamento e Postura Profissional",
+      timeMin: 20,
+      desc: "Detalhes que elevam o padrão Barba Negra.",
+      icon: iconBeard(),
+      status: "none",
+      dots: 3,
+      content: `
+        <h4>ACABAMENTO & POSTURA</h4>
+        <p>Conteúdo em construção.</p>
+      `
+    },
+  ],
+  gestao: [
+    {
+      id: "g-01",
+      title: "Rotina Administrativa e Relatórios",
+      timeMin: 30,
+      desc: "Fluxo de caixa, metas e acompanhamento.",
+      icon: iconChart(),
+      status: "none",
+      dots: 3,
+      content: `
+        <h4>ROTINA ADMINISTRATIVA</h4>
+        <p>Conteúdo em construção.</p>
+      `
+    },
+  ],
+};
 
 /* ==========================
    STORAGE (estado)
@@ -381,6 +437,56 @@ function renderFundamentals(){
     el.addEventListener("click", () => openModule(m.id));
     fundGrid.appendChild(el);
   });
+}
+
+function renderTrackSection(sectionKey){
+  const grid = document.getElementById(`grid-${sectionKey}`);
+  if(!grid) return;
+
+  const list = trackModules[sectionKey] || [];
+  grid.innerHTML = "";
+
+  list.forEach((m) => {
+    const el = document.createElement("button");
+    el.type = "button";
+    el.className = "card";
+    el.setAttribute("data-id", m.id);
+
+    el.innerHTML = `
+      <div class="card-top">
+        <div class="icon-tile" aria-hidden="true">${m.icon}</div>
+        <div class="time">${iconClock()}<span>${m.timeMin} min</span></div>
+      </div>
+      <div>
+        <h4>${escapeHTML(m.title)}</h4>
+        <p>${escapeHTML(m.desc)}</p>
+      </div>
+      <div class="card-bottom">
+        <div class="dots" aria-hidden="true">${renderDots(m.dots, m.status)}</div>
+        <div class="status ${statusClass(m.status)}">${statusLabel(m.status)}</div>
+      </div>
+    `;
+
+    // abre o conteúdo no seu modal/overlay
+    el.addEventListener("click", () => openCustomModule(m));
+    grid.appendChild(el);
+  });
+}
+
+// abre um módulo vindo das trilhas (não do array fundamentals)
+function openCustomModule(m){
+  currentModuleId = m.id;
+
+  modalTitle.textContent = m.title;
+  modalTime.textContent = "⏱ " + m.timeMin + " min";
+  modalStatus.textContent = statusLabel(m.status);
+  modalIcon.innerHTML = m.icon;
+  modalBody.innerHTML = m.content;
+
+  overlay.classList.add("show");
+  overlay.setAttribute("aria-hidden","false");
+  document.body.classList.add("module-open");
+  overlay.scrollTop = 0;
 }
 
 function renderTracks(){
@@ -596,6 +702,13 @@ document.getElementById("continueBtn").addEventListener("click", () => {
 function init(){
   renderFundamentals();
   renderTracks();
+
+  // 👉 AQUI: renderiza os módulos das trilhas
+  renderTrackSection("recepcao");
+  renderTrackSection("cabeleireiros");
+  renderTrackSection("barbeiros");
+  renderTrackSection("gestao");
+
   computeOverall();
 
   if(typeof state.scrollY === "number" && state.scrollY > 0){
@@ -604,10 +717,10 @@ function init(){
   setActive(state.activeSection || "home");
 
   const d = new Date();
-  document.getElementById("lastUpdate").textContent = "Hoje (" + d.toLocaleDateString("pt-BR") + ")";
+  document.getElementById("lastUpdate").textContent =
+    "Hoje (" + d.toLocaleDateString("pt-BR") + ")";
 }
 init();
-
 // ====== Full-page module behavior (trava fundo + restaura scroll) ======
 let __lastScrollY = 0;
 
@@ -633,7 +746,7 @@ function closeModuleView() {
   overlay.setAttribute("aria-hidden", "true");
 
   // destrava scroll do fundo
-  document.body.classList.remove("module-open");
+ document.body.classList.remove("module-open");
 
   // volta exatamente onde estava antes de abrir o módulo
   window.scrollTo(0, __lastScrollY);
