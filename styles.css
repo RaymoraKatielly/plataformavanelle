@@ -853,7 +853,6 @@ body.module-open{
 /* ==================================================
    VANÉLLE — ESCALA VISUAL UNIFICADA (GLOBAL)
    Fundamentos + Trilhas + Modal
-   Cole no FINAL do styles.css
    ================================================== */
 
 :root{
@@ -999,7 +998,6 @@ body.module-open{
 /* ==================================================
    VANÉLLE — ACABAMENTO PREMIUM (ALINHAMENTO + RITMO)
    Fundamentos + Trilhas + CTA + Espaçamentos
-   Cole no FINAL do styles.css
    ================================================== */
 
 /* 1) Ritmo geral das seções */
@@ -1130,3 +1128,16 @@ body.module-open{
   }
 }
 /* ================================================== */
+/*Isso cria uma “linha guia” bem sutil no título das seções*/
+.section-head{
+  position: relative;
+}
+.section-head::after{
+  content:"";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(124,92,67,.22), transparent);
+  align-self: center;
+  margin-left: 10px;
+  border-radius: 99px;
+}
