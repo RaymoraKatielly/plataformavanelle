@@ -698,10 +698,25 @@ h1{
 }
 
 .modal-body ul{
-  margin: 8px 0 14px;
-  padding-left: 18px;
-  color: rgba(43,31,22,.74);
+  margin: 12px 0 20px;
+  padding-left: 0;
+  list-style: none;
 }
+
+.modal-body li{
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 8px;
+}
+
+.modal-body li::before{
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--brand);
+  font-weight: 900;
+}
+
 
 .modal-body .highlight{
   margin: 26px 0;
