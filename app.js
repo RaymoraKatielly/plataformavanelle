@@ -1,6 +1,3 @@
-/* ==========================
-   DATA (você pode editar)
-   ========================== */
 
    //sessão fundamentos essenciais
 const fundamentals = [
@@ -462,15 +459,20 @@ function openModule(id){
 
   overlay.classList.add("show");
   overlay.setAttribute("aria-hidden","false");
-  document.body.style.overflow = "hidden";
+
+  // use sua classe padrão
+  document.body.classList.add("module-open");
+  overlay.scrollTop = 0;
 }
 
 function closeModule(){
   overlay.classList.remove("show");
   overlay.setAttribute("aria-hidden","true");
-  document.body.style.overflow = "";
+
+  document.body.classList.remove("module-open");
   currentModuleId = null;
 }
+
 
 overlay.addEventListener("click", (e) => { if(e.target === overlay) closeModule(); });
 closeModalBtn.addEventListener("click", closeModule);
