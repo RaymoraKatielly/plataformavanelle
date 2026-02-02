@@ -741,17 +741,19 @@ function openModuleView() {
   window.scrollTo(0, 0);
 }
 
-function closeModuleView() {
+function closeModule(){
   overlay.classList.remove("show");
-  overlay.setAttribute("aria-hidden", "true");
+  overlay.setAttribute("aria-hidden","true");
 
-  // destrava scroll do fundo
- document.body.classList.remove("module-open");
+  // destrava o scroll do fundo (padrão do seu CSS)
+  document.body.classList.remove("module-open");
+
+  currentModuleId = null;
+}
 
   // volta exatamente onde estava antes de abrir o módulo
   window.scrollTo(0, __lastScrollY);
-}
-
+  
 /* ==========================
    Helpers
    ========================== */
