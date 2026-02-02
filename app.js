@@ -657,12 +657,23 @@ function scrollToSection(section, smooth=false){
 nav.addEventListener("click", (e) => {
   const a = e.target.closest("a[data-section]");
   if(!a) return;
+
   e.preventDefault();
 
   const section = a.dataset.section;
+
+  // se o módulo (overlay) estiver aberto, fecha antes de navegar
+  if (overlay.classList.contains("show")) {
+    closeModule();
+  }
+
+  // navega
   scrollToSection(section, true);
+
+  // fecha o menu no mobile
   closeDrawer();
 });
+
 
 // detect section on scroll
 const sections = ["home","fundamentos","trilhas","recepcao","cabeleireiros","barbeiros","gestao"];
