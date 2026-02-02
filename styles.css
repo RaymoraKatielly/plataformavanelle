@@ -3,27 +3,49 @@
    ========================== */
 
 :root{
-  --bg: #f6f1e7;           /* off-white/bege */
-  --panel: #fbf7ef;        /* superfície clara */
-  --panel-2: #ffffff;      /* branco */
+  /* FUNDO PRINCIPAL – bege quente */
+  --bg: #f4eee4;
+
+  /* Superfícies */
+  --panel: #faf5ec;
+  --panel-2: #ffffff;
+
+  /* Bordas e sombras (mantém) */
   --border: rgba(124, 92, 67, .18);
   --shadow: 0 10px 28px rgba(25, 15, 8, .08);
   --shadow-sm: 0 8px 18px rgba(25, 15, 8, .06);
-  --text: #2b1f16;         /* marrom escuro */
+
+  /* Texto */
+  --text: #2b1f16;
   --muted: rgba(43,31,22,.72);
   --muted-2: rgba(43,31,22,.55);
-  --brand: #7a4d2a;        /* marrom destaque */
+
+  /* Marca */
+  --brand: #7a4d2a;
   --brand-2: #a46a35;
-  --gold: #d5b06b;         /* dourado discreto */
-  --pill: #f0e4cf;
+
+  /* Destaque dourado */
+  --gold: #d5b06b;
+
+  /* Pills / chips */
+  --pill: #f2e6d3;
+
+  /* Raios */
   --radius: 18px;
   --radius-sm: 14px;
+
+  /* Ring / foco */
   --ring: 0 0 0 3px rgba(213,176,107,.25);
+
+  /* Layout */
   --sidebar-w: 276px;
   --max: 1120px;
+
+  /* Fontes */
   --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
   --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", "Noto Sans", "Liberation Sans", sans-serif;
 }
+/* ====== Global resets ====== */
 
 *{ box-sizing: border-box; }
 html,body{ height:100%; }
