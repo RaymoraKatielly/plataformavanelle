@@ -1418,3 +1418,28 @@ h1,
   .track-section .grid{ grid-template-columns: 1fr; }
 }
 /* ================================================== */
+
+/* ====== FIX: fundo do conteúdo principal ====== */
+html, body{
+  background: var(--bg) !important;
+}
+
+.main{
+  background: transparent !important; /* deixa o body aparecer */
+}
+
+.container{
+  background: transparent !important;
+}
+
+/* Topbar / header sticky também acompanha o fundo */
+.topbar,
+.modal-head{
+  background: rgba(244, 238, 228, .92) !important; /* ajuste pro seu novo bege */
+}
+
+/* Overlay deve usar o mesmo fundo */
+.overlay{
+  background: var(--bg) !important;
+}
+/* ================================================== */
