@@ -1472,3 +1472,49 @@ main.main,
 main.main > .container{
   background: var(--bg);
 }
+
+/* ==============================
+   COMPACTAÇÃO DO HEADER DO MÓDULO
+   Apresentação Pessoal
+   ============================== */
+
+/* container do topo do módulo */
+.module-header,
+.lesson-header,
+.presentation-header {
+  padding: 16px 20px;          /* antes devia estar 32px+ */
+  min-height: unset;
+}
+
+/* título principal */
+.module-header h1,
+.lesson-header h1,
+.presentation-header h1 {
+  font-size: 1.25rem;          /* reduz impacto visual */
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+/* texto secundário (tempo, status etc) */
+.module-header .meta,
+.lesson-header .meta,
+.presentation-header .meta {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+/* ícone/avatar do módulo */
+.module-header .icon,
+.lesson-header .icon,
+.presentation-header .icon {
+  width: 36px;
+  height: 36px;
+}
+
+/* espaçamento após o header */
+.module-header + .content,
+.lesson-header + .content,
+.presentation-header + .content {
+  margin-top: 12px;
+}
+/* ============================== */
