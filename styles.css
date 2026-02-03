@@ -4,31 +4,19 @@
 
 :root{
   /* FUNDO PRINCIPAL – bege quente */
-  --bg: #f4eee4;
-
-  /* Superfícies */
-  --panel: #faf5ec;
-  --panel-2: #ffffff;
-
-  /* Bordas e sombras (mantém) */
-  --border: rgba(124, 92, 67, .18);
-  --shadow: 0 10px 28px rgba(25, 15, 8, .08);
-  --shadow-sm: 0 8px 18px rgba(25, 15, 8, .06);
-
-  /* Texto */
+  --bg: #865834;           /* fundo principal (cor da imagem) */
+  --panel: rgba(255,255,255,.70);
+  --panel-2: rgba(255,255,255,.85);
+  --border: rgba(255,255,255,.18);
+  --shadow: 0 10px 28px rgba(25, 15, 8, .16);
+  --shadow-sm: 0 8px 18px rgba(25, 15, 8, .12);
   --text: #2b1f16;
   --muted: rgba(43,31,22,.72);
   --muted-2: rgba(43,31,22,.55);
-
-  /* Marca */
   --brand: #7a4d2a;
   --brand-2: #a46a35;
-
-  /* Destaque dourado */
   --gold: #d5b06b;
-
-  /* Pills / chips */
-  --pill: #f2e6d3;
+  --pill: rgba(240,228,207,.75);
 
   /* Raios */
   --radius: 18px;
@@ -1442,4 +1430,16 @@ html, body{
 .overlay{
   background: var(--bg) !important;
 }
+/* ================================================== */
+html, body { background: var(--bg) !important; }
+
+.app { background: var(--bg); }
+
+.main { background: transparent; } /* deixa aparecer o --bg do body/app */
+
+/* se o seu overlay (módulo) estiver parecendo diferente */
+.overlay { background: var(--bg); }
+
+/* topbar (mobile) seguir o fundo */
+.topbar { background: rgba(134, 88, 52, .90); }
 /* ================================================== */
