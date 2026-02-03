@@ -1451,3 +1451,24 @@ html, body { background: var(--bg) !important; }
 /* topbar (mobile) seguir o fundo */
 .topbar { background: rgba(134, 88, 52, .90); }
 /* ================================================== */
+
+/* =========================================
+   PATCH FINAL — FUNDO PRINCIPAL VANÉLLE
+   Corrige o fundo cinza da área central
+   ========================================= */
+
+/* Cor oficial de fundo (bege quente) */
+:root{
+  --bg: #865834; /* bege caramelo elegante */
+}
+
+/* Garante base */
+html, body{
+  background: var(--bg);
+}
+
+/* 🔴 O CULPADO REAL */
+main.main,
+main.main > .container{
+  background: var(--bg);
+}
