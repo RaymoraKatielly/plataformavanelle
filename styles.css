@@ -1569,3 +1569,117 @@ div[id^="grid-"].grid > button.card{
   padding: 18px 18px !important;
   text-align: left;
 }
+/* =========================================================
+   VANÉLLE — ACCENT VERDE (hover, ativo, progresso)
+   Cor base: verde oliva sofisticado (estofado)
+   ========================================================= */
+
+:root{
+  --accent: #6F7F6B;                 /* verde principal */
+  --accent-2: #5F6E5B;               /* verde mais escuro (hover/active) */
+  --accent-soft: rgba(111,127,107,.18);
+  --accent-soft-2: rgba(111,127,107,.28);
+}
+
+/* --- Títulos/links que estão ficando azuis (mobile/estado) --- */
+button.card h3,
+button.card h4,
+a, a:visited{
+  color: var(--accent);
+}
+button.card:active h3,
+button.card:active h4,
+button.card:focus h3,
+button.card:focus h4,
+a:hover, a:active, a:focus{
+  color: var(--accent-2) !important;
+}
+
+/* remove o "azul de toque" do mobile */
+button, a{
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* --- Cards (módulos) em estados de interação --- */
+button.card{
+  border-color: var(--border);
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+button.card:hover{
+  border-color: var(--accent-soft-2);
+  box-shadow: 0 10px 28px rgba(25, 15, 8, .10);
+}
+button.card:active{
+  border-color: var(--accent-soft-2);
+  transform: translateY(1px);
+}
+button.card:focus-visible{
+  outline: 2px solid var(--accent-soft-2);
+  outline-offset: 3px;
+}
+
+/* --- Ícones (se forem SVG/ícones dentro dos cards) --- */
+button.card svg,
+button.card .icon{
+  color: var(--accent);
+}
+button.card:hover svg,
+button.card:hover .icon{
+  color: var(--accent-2);
+}
+
+/* --- Chips / badges (ex: "Obrigatórios") --- */
+.badge,
+.chip,
+.tag{
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-soft-2);
+  color: var(--accent-2);
+}
+
+/* --- Progresso (barra e fill) --- */
+.progress,
+.progressbar,
+.progress-track{
+  background: rgba(43,31,22,.08);
+}
+.progress > span,
+.progressbar > span,
+.progress-fill{
+  background: var(--accent) !important;
+}
+
+/* --- Pontinhos (carousel/etapas) --- */
+.dots span,
+.dot{
+  background: rgba(43,31,22,.15);
+}
+.dots span.active,
+.dot.active{
+  background: var(--accent) !important;
+}
+
+/* --- Botões principais (Marcar/Atualizar progresso, Voltar etc.) --- */
+.btn-primary,
+button.primary,
+.actions button{
+  border-color: var(--accent-soft-2);
+}
+.btn-primary:hover,
+button.primary:hover,
+.actions button:hover{
+  border-color: var(--accent);
+}
+
+/* --- Estados ativos do menu lateral (se existir) --- */
+.nav a.active,
+.sidebar a.active,
+.menu a.active{
+  color: var(--accent-2) !important;
+}
+.nav a.active::before,
+.sidebar a.active::before,
+.menu a.active::before{
+  background: var(--accent) !important;
+}
+/* ================================================== */
