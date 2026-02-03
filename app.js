@@ -257,6 +257,7 @@ const fundamentals = [
         <li>✓ Você é responsável pela sua estação de trabalho</li>
         <li>✓ Produtos, ferramentas e utensílios identificados e acessíveis</li>
         <li>✓ Ambiente mantido limpo durante <b>TODO</b> o expediente</li>
+        <li>✓ Durante o atendimento é obrigatório o uso do rádio para comunicação interna</li>
       </ul>
 
       <h4>APRESENTAÇÃO PESSOAL</h4>
