@@ -1528,3 +1528,44 @@ body .modal-head *{
   scroll-margin-top: 0 !important;
 }
 /* ================================ */
+
+/* =========================================
+   MÓDULOS EM FORMATO RETÂNGULO (1 coluna)
+   Somente na Recepção (grid-recepcao)
+   ========================================= */
+
+#grid-recepcao.grid{
+  grid-template-columns: 1fr !important; /* vira lista retangular */
+}
+
+/* card do módulo */
+#grid-recepcao.grid > button.card{
+  width: 100% !important;
+  min-height: 140px !important;          /* ajusta o “retângulo” */
+  padding: 18px 18px !important;
+  text-align: left;
+}
+
+/* melhora o título e descrição dentro do card */
+#grid-recepcao.grid > button.card h4{
+  line-height: 1.15;
+  margin: 6px 0 6px !important;
+}
+
+#grid-recepcao.grid > button.card p{
+  max-width: 60ch;
+}
+/* =========================================
+   TODOS OS GRIDS DE TRILHA EM 1 COLUNA
+   (módulos retangulares)
+   ========================================= */
+div[id^="grid-"].grid{
+  grid-template-columns: 1fr !important;
+}
+
+div[id^="grid-"].grid > button.card{
+  width: 100% !important;
+  min-height: 140px !important;
+  padding: 18px 18px !important;
+  text-align: left;
+}
