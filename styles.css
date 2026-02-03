@@ -1507,3 +1507,24 @@ main.main > .container{
 .modal .content{
   padding-top: 72px; /* ajuste fino: 64–84 */
 }
+/* ================================
+   FORÇA DESFIXAR O CABEÇALHO
+   (caso sticky/fixed esteja sendo reimposto)
+   ================================ */
+
+body .modal-head{
+  position: static !important;   /* remove sticky/fixed */
+  top: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  inset: auto !important;
+  transform: none !important;
+}
+
+/* se existir algum wrapper que esteja fixando o topo */
+body .modal-head,
+body .modal-head *{
+  scroll-margin-top: 0 !important;
+}
+/* ================================ */
