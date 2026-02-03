@@ -47,6 +47,14 @@ body{
 }
 a{ color: inherit; text-decoration: none; }
 
+/* FORÇA FUNDO DA PÁGINA TODA */
+html, body { background: var(--bg) !important; }
+
+/* garante que o layout não pinta por cima */
+.app { background: transparent !important; }
+.main { background: transparent !important; }
+.container { background: transparent !important; }
+
 /* ====== Layout ====== */
 .app{
   display:flex;
