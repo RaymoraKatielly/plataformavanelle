@@ -1459,7 +1459,7 @@ html, body { background: var(--bg) !important; }
 
 /* Cor oficial de fundo (bege quente) */
 :root{
-  --bg: #865834; /* bege caramelo elegante #865834 */
+  --bg: #865834; /* bege caramelo elegante #865834 ou #EAD7C3 */
 }
 
 /* Garante base */
