@@ -687,7 +687,7 @@ h1{
   top: 0;
   z-index: 10;
 
-  padding: 12px 16px;               /* compacta */
+  padding: 8px 8px;               /* compacta */
   background: rgba(246,241,231,.96);
   backdrop-filter: blur(8px);
 
