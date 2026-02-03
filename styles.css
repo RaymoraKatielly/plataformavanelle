@@ -700,6 +700,17 @@ h1{
 
   min-height: 56px;                 /* controla o tamanho */
 }
+/* título do topo do modulo quando abre*/
+.modal-head h1{
+  font-size: 1.2rem;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.modal-head .meta{
+  font-size: .85rem;
+  opacity: .75;
+}
 
 /* Ícone do cabeçalho do módulo */
 .modal-head .icon-tile{
