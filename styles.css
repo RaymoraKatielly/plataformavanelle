@@ -1491,3 +1491,19 @@ main.main > .container{
 }
 
 /* ==============================
+
+/* Header continua fixo/sticky */
+.modal-head{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Conteúdo não fica por baixo do header */
+.modal-body,
+.modal-content,
+.modal-inner,
+.modal-scroll,
+.modal .content{
+  padding-top: 72px; /* ajuste fino: 64–84 */
+}
