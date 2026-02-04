@@ -1970,6 +1970,12 @@ section[data-section="trilhas"] .section-head{
 
 @media (max-width: 768px){
   section.card.compromisso{
-    margin-bottom: 18px !important; /* ajuste fino: 12–16px é o ideal */
+    margin-bottom: 20px !important; /* ajuste fino: 12–16px é o ideal */
   }
 }
+/* evita que o título empurre demais */
+  section#trilhas h2,
+  section#trilhas h3{
+    margin-top: 0 !important;
+  }
+/* ========================================= */
