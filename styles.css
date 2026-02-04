@@ -1685,48 +1685,49 @@ button.primary:hover,
 /* ================================================== */
 
 /* =========================================
-   VANÉLLE — PADRONIZAÇÃO DE TÍTULOS
-   Todos os títulos na mesma cor
+   VANÉLLE — COR ÚNICA DOS TÍTULOS
+   Verde oliva aprovado pela cliente
    ========================================= */
 
-/* títulos principais */
+:root{
+  --vanelle-green: #6F7F6B;
+}
+
+/* TODOS os títulos do sistema */
 h1,
 h2,
 h3,
-h4{
-  color: var(--title-color) !important;
+h4,
+h5{
+  color: var(--vanelle-green) !important;
 }
 
-/* títulos de seção */
-.section-head h3,
+/* títulos de seções */
 .section-head h2,
-.track-section h3,
-.track-section h2{
-  color: var(--title-color) !important;
+.section-head h3,
+.section-head h4{
+  color: var(--vanelle-green) !important;
 }
 
-/* títulos dos cards (módulos) */
+/* títulos dos cards/módulos */
 button.card h3,
 button.card h4,
 .card h3,
-.card h4,
-.track h3,
-.track h4{
-  color: var(--title-color) !important;
+.card h4{
+  color: var(--vanelle-green) !important;
 }
 
-/* títulos especiais que estavam herdando outras cores */
-.brand-text,
-.welcome h2,
+/* títulos no modal */
+.modal-head h2,
 .modal-head h3,
-.modal-head h2{
-  color: var(--title-color) !important;
+.modal-head h4{
+  color: var(--vanelle-green) !important;
 }
 
-/* estados mobile / interação (remove azul de vez) */
+/* estados mobile (remove azul/preto ao tocar) */
 button.card:active h3,
 button.card:active h4,
 button.card:focus h3,
 button.card:focus h4{
-  color: var(--title-color) !important;
+  color: var(--vanelle-green) !important;
 }
