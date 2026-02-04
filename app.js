@@ -146,7 +146,7 @@ const fundamentals = [
           e direção geral.
         </li>
         <li>
-          ✓ <b>Diretora Financeira & Administrativa — Vandriellen Alves Ferreira</b><br/>
+          ✓ <b>Diretor Financeiro & Administrativo — Vandriellen Alves Ferreira</b><br/>
           Responsável por finanças, administração, processos internos e recursos humanos.
         </li>
       </ul>
