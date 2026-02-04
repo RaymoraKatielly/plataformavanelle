@@ -1970,6 +1970,6 @@ section[data-section="trilhas"] .section-head{
 
 @media (max-width: 768px){
   section.card.compromisso{
-    margin-bottom: 14px !important; /* ajuste fino: 12–16px é o ideal */
+    margin-bottom: 18px !important; /* ajuste fino: 12–16px é o ideal */
   }
 }
