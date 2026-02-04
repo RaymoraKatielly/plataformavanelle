@@ -1945,3 +1945,22 @@ section.card.compromisso{
   margin-bottom: 0px !important; /* antes devia estar 22px ou mais */
   padding-bottom: 0px !important;
 }
+/* =========================================
+   CORREÇÃO DEFINITIVA — ESPAÇO FANTASMA
+   ENTRE COMPROMISSO E TRILHAS
+   ========================================= */
+
+/* zera margem do título "Trilhas por Função" */
+section#trilhas h2,
+section#trilhas h3,
+section[data-section="trilhas"] h2,
+section[data-section="trilhas"] h3{
+  margin-top: 0 !important;
+}
+
+/* controla o espaço conscientemente */
+section#trilhas .section-head,
+section[data-section="trilhas"] .section-head{
+  margin-top: 4px !important;
+  padding-top: 0 !important;
+}
