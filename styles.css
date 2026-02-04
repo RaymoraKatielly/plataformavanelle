@@ -1914,3 +1914,19 @@ section.card.compromisso .badge-fake{
   border: 1px solid rgba(124, 92, 67, .18);
   flex: 0 0 auto;
 }
+/* =========================================
+   COMPROMISSO — CENTRALIZAR SÓ A "BOLINHA"
+   (sem mexer no texto)
+   ========================================= */
+
+section.card.compromisso{
+  display: flex !important;
+  align-items: flex-start !important;  /* mantém texto no topo */
+  gap: 14px !important;
+}
+
+/* faz SOMENTE o ícone alinhar no meio */
+section.card.compromisso > .badge-ico{
+  align-self: center !important;
+  margin-top: 0 !important;
+}
