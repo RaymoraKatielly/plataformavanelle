@@ -1964,3 +1964,12 @@ section[data-section="trilhas"] .section-head{
   margin-top: 4px !important;
   padding-top: 0 !important;
 }
+/* =========================================
+   MOBILE — RESPIRO ABAIXO DO COMPROMISSO
+   ========================================= */
+
+@media (max-width: 768px){
+  section.card.compromisso{
+    margin-bottom: 14px !important; /* ajuste fino: 12–16px é o ideal */
+  }
+}
