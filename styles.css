@@ -1942,6 +1942,6 @@ section.card.compromisso > div:last-child{
    ========================================= */
 
 section.card.compromisso{
-  margin-bottom: 5px !important; /* antes devia estar 22px ou mais */
-  padding-bottom: 10px !important;
+  margin-bottom: 0px !important; /* antes devia estar 22px ou mais */
+  padding-bottom: 0px !important;
 }
