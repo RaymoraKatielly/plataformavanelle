@@ -1731,3 +1731,30 @@ button.card:focus h3,
 button.card:focus h4{
   color: var(--vanelle-green) !important;
 }
+
+/* =========================================
+   AJUSTE DE ESPAÇAMENTO DO CONTEÚDO
+   Modal – subir texto
+   ========================================= */
+
+/* reduz espaço abaixo do cabeçalho */
+.modal-head{
+  padding-bottom: 8px !important;
+}
+
+/* sobe o conteúdo principal */
+.modal-body,
+.modal-content,
+.modal-inner{
+  margin-top: 0 !important;
+  padding-top: 12px !important; /* ajuste fino: 8–16 */
+}
+
+/* se houver container direto após o header */
+.modal-head + *{
+  margin-top: 8px !important;
+}
+/* se houver um wrapper extra */
+.modal-head + div{
+  margin-top: 8px !important;
+}
