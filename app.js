@@ -37,27 +37,21 @@ const fundamentals = [
 
       <h4>NOSSA HISTÓRIA</h4>
       <p>
-        Em <b>julho de 2010</b>, abrimos o <b>Morena Rosa Art e Beleza</b>. Desde então, crescemos com consistência, fé e trabalho diário.
-        O Morena Rosa nasceu em um momento difícil financeiramente — mas com um chamado no coração e um legado de família:
-        o amor pela beleza e pelo servir.
-      </p>
+      Em <b>julho de 2010</b>, nasceu o <b>Morena Rosa Art e Beleza</b>. Não nasceu em um cenário confortável. Nasceu em meio a desafios financeiros, recomeços e fé — mas também com um chamado claro no coração e um legado familiar muito forte: o amor pela beleza e pelo servir.</p>
 
-      <p>
-        Desde cedo, compreendemos algo que carregamos até hoje: <b>beleza também é ordem, organização e padrão</b>.
-        Quando chegamos em <b>Água Boa</b> com família pequena, recomeçamos do zero. Foram dias simples, difíceis e cheios de superação.
-        Mas Deus nos sustentou e, com trabalho intenso, visão e disciplina, construímos uma empresa sólida — com estrutura,
-        processos e uma cultura que respeita pessoas e valoriza profissionais.
-      </p>
+      <p>Cresci observando minha avó trabalhar em salão. Ainda muito jovem, aprendi algo que carrego até hoje e que se tornou um dos pilares da nossa empresa: beleza não é apenas estética — é ordem, organização, padrão e respeito.</p>
 
-      <p>
-        Depois, nasceu a <b>Barba Negra Barbearia</b>: um ambiente exclusivo para homens, onde seguimos construindo uma marca forte,
-        com identidade e excelência.
-      </p>
+      <p>Quando cheguei a Água Boa com meu esposo e meu filho ainda pequeno, recomeçamos do zero. Foram dias simples, difíceis e silenciosos. Houve inseguranças, limitações e muito trabalho. Mas também houve propósito, disciplina e a certeza de que Deus estava conduzindo cada passo.</p>
 
-      <p>
-        Hoje, somamos <b>mais de 20 parceiros diretos</b> e <b>mais de 50 indiretos</b>, entre CLT, parceiros, sublocatários e especialistas
-        de apoio (contabilidade, jurídico, segurança do trabalho e outros).
-      </p>
+      <p>Com fé, trabalho diário e visão, fomos construindo algo sólido. Não apenas um salão, mas uma empresa estruturada, com processos claros, cultura forte e um ambiente que respeita pessoas e valoriza profissionais.</p>
+
+      <p>Com o amadurecimento do negócio, nasceu também a <b>Barba Negra Barbearia</b> — um espaço exclusivo para homens, onde meu esposo decidiu entrar de forma ativa no ramo. Juntos, seguimos edificando marcas com identidade, excelência e propósito.</p>
+
+      <p>Hoje, somos uma empresa que impacta vidas.
+      Somamos mais de 20 parceiros diretos e mais de 50 indiretos, entre profissionais CLT, parceiros, sublocatários e especialistas de apoio nas áreas contábil, jurídica, segurança do trabalho e gestão.</p>
+
+      <p>Mais do que números, construímos uma cultura.
+      E a minha frase continua a mesma, com o mesmo significado de quando tudo começou:</p>
 
       <p>🙏 Só temos que agradecer a Deus por tudo que Ele tem nos proporcionado.</p>
 
