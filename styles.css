@@ -1769,4 +1769,65 @@ button.card:focus h4{
 .welcome{
   margin-bottom: 18px;
 }
+/* =========================================
+   HOME — AJUSTE BLOCO "COMPROMISSO"
+   + RESPIRO PARA "TRILHAS POR FUNÇÃO"
+   ========================================= */
 
+/* 1) Card Compromisso mais leve e premium */
+.compromisso{
+  background: rgba(251, 247, 239, .78) !important; /* mais leve que o card atual */
+  border: 1px solid rgba(124, 92, 67, .16) !important;
+  box-shadow: 0 10px 28px rgba(25, 15, 8, .06) !important;
+  border-radius: 18px !important;
+  padding: 18px 20px !important;
+  margin: 14px 0 22px !important; /* dá respiro antes das trilhas */
+}
+
+/* 2) Título do compromisso com hierarquia boa */
+.compromisso h2,
+.compromisso h3{
+  margin: 0 0 10px !important;
+  line-height: 1.1 !important;
+}
+
+/* 3) Texto do compromisso mais confortável */
+.compromisso p{
+  margin: 0 !important;
+  max-width: 72ch;               /* largura de leitura */
+  line-height: 1.55 !important;
+  color: rgba(43,31,22,.78) !important;
+}
+
+/* 4) Ícone do compromisso igual “welcome” (caixinha) */
+.compromisso .badge-ico{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(246,241,231,.9);
+  border: 1px solid rgba(124, 92, 67, .18);
+}
+
+/* 5) Se o compromisso estiver em layout flex, garante alinhamento */
+.compromisso{
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+/* 6) Respiro e alinhamento do título “Trilhas por Função” */
+#trilhas .section-head,
+section#trilhas .section-head,
+section#trilhas > .section-head{
+  margin-top: 10px !important;
+  margin-bottom: 14px !important;
+}
+
+/* Se “Trilhas por Função” não estiver dentro de #trilhas, pega por contexto */
+h2:where(:not(.compromisso *)),
+h3:where(:not(.compromisso *)){
+  scroll-margin-top: 80px;
+}
+/* ========================================= */
