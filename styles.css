@@ -40,7 +40,7 @@ html,body{ height:100%; }
 body{
   margin:0;
   background: var(--bg);
-  color: #6F7F6B (--text);
+  color: var(--text);
   font-family: var(--sans);
   line-height: 1.35;
   overflow-x:hidden;
