@@ -1878,3 +1878,39 @@ h3:where(:not(.compromisso *)){
   flex: 1 1 auto;
   min-width: 0;
 }
+/* =========================================
+   COMPROMISSO — ÍCONE IGUAL AO BEM-VINDO
+   ========================================= */
+
+/* garante layout correto */
+section.card.compromisso{
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* pega o PRIMEIRO svg e cria a caixinha */
+section.card.compromisso svg{
+  width: 18px;
+  height: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+/* cria a "bolinha" ao redor do svg */
+section.card.compromisso svg::before{
+  content: "";
+  position: absolute;
+}
+
+/* envolve o svg com aparência de badge */
+section.card.compromisso .badge-fake{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(246,241,231,.9);
+  border: 1px solid rgba(124, 92, 67, .18);
+  flex: 0 0 auto;
+}
