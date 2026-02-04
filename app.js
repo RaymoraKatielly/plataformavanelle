@@ -20,7 +20,7 @@ const fundamentals = [
       </p>
 
       <h4>NOSSAS MARCAS</h4>
-      <p>Dentro desse lugar abençoado, vivem duas marcas que carregam história e identidade:</p>
+      <p>Dentro desse lugar abençoado, existem varias marcas que carregam histórias e identidades, mas vamos falar de duas em especial que são nossas:</p>
       <ul>
         <li>✓ <b>Morena Rosa Art e Beleza</b> — excelência em cuidados capilares e estética feminina</li>
         <li>✓ <b>Barba Negra Barbearia</b> — ambiente exclusivo para barba e estilo masculino</li>
