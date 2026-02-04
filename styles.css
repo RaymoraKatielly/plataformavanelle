@@ -1766,12 +1766,3 @@ button.card:focus h4{
 .modal-head + div{
   margin-top: 8px !important;
 }
-
-/* Welcome antes das Trilhas: versão compacta */
-#welcome-trilhas.welcome{
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-#welcome-trilhas.welcome p{
-  max-width: 72ch;
-}
