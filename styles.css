@@ -1831,3 +1831,23 @@ h3:where(:not(.compromisso *)){
   scroll-margin-top: 80px;
 }
 /* ========================================= */
+/* =========================================
+   AJUSTE DE LARGURA DO TEXTO — COMPROMISSO
+   ========================================= */
+
+/* garante que o card use toda a largura */
+.compromisso{
+  align-items: stretch;
+}
+
+/* bloco de texto ocupa TODO o espaço disponível */
+.compromisso > div{
+  flex: 1 1 auto;
+  max-width: 100% !important;
+}
+
+/* texto mais largo, leitura confortável */
+.compromisso p{
+  max-width: 100% !important;   /* remove limitação */
+  line-height: 1.6;
+}
