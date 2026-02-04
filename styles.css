@@ -1851,3 +1851,30 @@ h3:where(:not(.compromisso *)){
   max-width: 100% !important;   /* remove limitação */
   line-height: 1.6;
 }
+/* =========================================
+   BADGE-ICO do "Compromisso" igual ao Bem-vindo
+   ========================================= */
+
+.compromisso{
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* a "bolinha" (na verdade um quadradinho arredondado) */
+.compromisso .badge-ico{
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 14px !important;
+  display: grid !important;
+  place-items: center !important;
+  background: rgba(246,241,231,.9) !important;
+  border: 1px solid rgba(124, 92, 67, .18) !important;
+  flex: 0 0 auto !important;
+}
+
+/* garante que o texto ocupe o resto da linha */
+.compromisso > div:last-child{
+  flex: 1 1 auto;
+  min-width: 0;
+}
