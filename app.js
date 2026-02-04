@@ -28,7 +28,7 @@ const fundamentals = [
 
       <h4>POR QUE EXISTIMOS</h4>
       <p>
-        Nós existimos por um motivo: <b>transformar pessoas na sua melhor versão</b>, com padrão, respeito e profissionalismo.
+        Nós existimos por um motivo: <b>transformar pessoas na sua MELHOR VERSÃO</b>, com padrão, respeito e profissionalismo.
       </p>
 
       <p style="padding:10px 12px;border-radius:14px;border:1px solid rgba(164,106,53,.26);background:rgba(240,228,207,.7)">
