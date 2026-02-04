@@ -1766,3 +1766,7 @@ button.card:focus h4{
 .modal-head + div{
   margin-top: 8px !important;
 }
+.welcome{
+  margin-bottom: 18px;
+}
+
