@@ -1915,18 +1915,25 @@ section.card.compromisso .badge-fake{
   flex: 0 0 auto;
 }
 /* =========================================
-   COMPROMISSO — CENTRALIZAR SÓ A "BOLINHA"
-   (sem mexer no texto)
+   COMPROMISSO — IGUAL AO BEM-VINDO
+   (bolinha alinhada ao título)
    ========================================= */
 
 section.card.compromisso{
-  display: flex !important;
-  align-items: flex-start !important;  /* mantém texto no topo */
-  gap: 14px !important;
+  display: grid !important;
+  grid-template-columns: 44px 1fr;
+  column-gap: 14px;
+  align-items: start;
 }
 
-/* faz SOMENTE o ícone alinhar no meio */
-section.card.compromisso > .badge-ico{
-  align-self: center !important;
-  margin-top: 0 !important;
+/* bolinha */
+section.card.compromisso .badge-ico{
+  margin-top: 2px; /* alinha com o texto do h2 */
+}
+
+/* garante que título e texto fiquem empilhados */
+section.card.compromisso > div:last-child{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
